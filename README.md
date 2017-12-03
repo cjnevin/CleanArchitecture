@@ -95,7 +95,7 @@ Example(s): `UserListViewModel`, `UserDetailViewModel`, `UserLocationViewModel`
 
 Unit tested with `RxTest` framework and mock `Navigator`.
 
-## Platform (Executable)
+## Platform (App for each Platform)
 Imports `Presentation`
 
 Imports `Entity`
