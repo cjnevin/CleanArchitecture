@@ -89,7 +89,7 @@ Defines Interface of `Navigator`
 
 Exposes `Entity` data from `UseCase` to `ViewModel`. `View` is responsible for `Rx` binding.
 
-Navigates between `Presenter`'s using `Navigator`.
+Exposes `Action` to navigate using `Navigator`.
 
 Example(s): `UserListViewModel`, `UserDetailViewModel`, `UserLocationViewModel`
 
