@@ -1,5 +1,7 @@
 # Clean Architecture
-My take on clean architecture.
+My take on Uncle Bob's clean architecture in Swift.
+
+The workspace is comprised of 5 main frameworks with each service having an additional framework and each platform having an additional app.
 
 ## Entity (Framework)
 Defines common object structure.
