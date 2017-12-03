@@ -9,11 +9,11 @@ public protocol LocationService {
 
 public struct UserLocationProvider: UseCase.UserLocationProvider {
     private let service: LocationService
-    
+
     public init(service: LocationService) {
         self.service = service
     }
-    
+
     public func getLocation() -> Observable<Location> {
         return service.getCurrentLocation()
     }

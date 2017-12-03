@@ -7,15 +7,15 @@ import UseCase
 
 struct GetUserUseCaseFactory {
     private let provider: DataProvider.UserProvider
-    
-	init() {
-		let transformer = UserJsonDataTransformer()
+
+    init() {
+        let transformer = UserJsonDataTransformer()
         let storage = UserStorageService()
         let api = UserApiService(transformer: transformer)
         self.provider = UserProvider(storage: storage, api: api)
     }
-    
-	func makeGetUserUseCase() -> GetUserUseCase {
+
+    func makeGetUserUseCase() -> GetUserUseCase {
         return GetUserUseCase(provider: provider)
     }
 }

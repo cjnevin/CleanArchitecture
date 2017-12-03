@@ -8,9 +8,9 @@ class AppNavigator {
             }
         }
     }
-    
+
     private func begin() {
-		let viewFactory = UserViewFactory()
+        let viewFactory = UserViewFactory()
         window?.rootViewController = viewFactory.makeUserView()
         window?.makeKeyAndVisible()
     }

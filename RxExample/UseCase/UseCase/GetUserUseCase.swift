@@ -8,11 +8,11 @@ public protocol UserProvider {
 
 public struct GetUserUseCase {
     private let provider: UserProvider
-    
+
     public init(provider: UserProvider) {
         self.provider = provider
     }
-    
+
     public func getUser() -> Single<User> {
         return provider.getUser()
     }

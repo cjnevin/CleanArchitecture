@@ -6,6 +6,7 @@ public struct User {
     public var fullName: String {
         return "\(firstName) \(lastName)"
     }
+
     public init(firstName: String, lastName: String) {
         self.firstName = firstName
         self.lastName = lastName

@@ -15,21 +15,21 @@ public protocol UserApiService {
 public struct UserProvider: UseCase.UserProvider {
     private let storage: UserStorageService
     private let api: UserApiService
-    
+
     public init(storage: UserStorageService,
                 api: UserApiService) {
         self.storage = storage
         self.api = api
     }
-    
+
     public func getUser() -> Single<User> {
         return storage.getUser()
-            .catchError { _ in
-                return self.api.fetchUser()
-                    .flatMap { user in
-                        self.storage.setUser(user)
-                            .andThen(.just(user))
-                    }
-            }
+                .catchError { _ in
+                    return self.api.fetchUser()
+                            .flatMap { user in
+                                self.storage.setUser(user)
+                                        .andThen(.just(user))
+                            }
+                }
     }
 }
