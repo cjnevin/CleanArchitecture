@@ -3,7 +3,7 @@ My take on Uncle Bob's clean architecture in Swift.
 
 *There are two example projects:*
 - **Example** (no asynchronous events, everything returns immediately)
-- **RxExample** (asynchronous)
+- **RxExample** (asynchronous, RxSwift, RxCocoa, Action)
 
 The workspaces are comprised of 5 main frameworks with each service having an additional framework and each platform having an additional app.
 
@@ -51,7 +51,7 @@ Examples(s): `UserJsonTransformer`, `UserRealmTransformer`, `LocationCLLocationT
 
 Unit tested.
 
-## Service (Framework for Each)
+## Service (Framework for each)
 Imports `DataProvider`
 
 Imports `Entity`
@@ -64,10 +64,12 @@ Example(s): `ApiService`, `LocationService`, `StorageService`
 
 Unit tested with mock `DataTransformer`.
 
-## Presenter (Framework)
+## Presentation (Framework)
 Imports `Entity`
 
 Imports `UseCase`
+
+### Presenter (MVP)
 
 Defines Interface of `View`
 
@@ -81,8 +83,20 @@ Example(s): `UserListPresenter`, `UserDetailPresenter`, `UserLocationPresenter`
 
 Unit tested with mock `View` and `Navigator`.
 
-## Platform (Executable)
-Imports `Presenter`
+### ViewModel (MVVM)
+
+Defines Interface of `Navigator`
+
+Exposes `Entity` data from `UseCase` to `ViewModel`. `View` is responsible for `Rx` binding.
+
+Exposes `Action` to navigate using `Navigator`.
+
+Example(s): `UserListViewModel`, `UserDetailViewModel`, `UserLocationViewModel`
+
+Unit tested with `RxTest` framework and mock `Navigator`.
+
+## Platform (App for each)
+Imports `Presentation`
 
 Imports `Entity`
 
