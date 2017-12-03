@@ -1,7 +1,11 @@
 # Clean Architecture
 My take on Uncle Bob's clean architecture in Swift.
 
-The workspace is comprised of 5 main frameworks with each service having an additional framework and each platform having an additional app.
+*There are two example projects:*
+- **Example** (no asynchronous events, everything returns immediately)
+- **RxExample** (asynchronous)
+
+The workspaces are comprised of 5 main frameworks with each service having an additional framework and each platform having an additional app.
 
 ## Entity (Framework)
 Defines common object structure.
