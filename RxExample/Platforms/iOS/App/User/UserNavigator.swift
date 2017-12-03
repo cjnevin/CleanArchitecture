@@ -1,7 +1,7 @@
 import UIKit
-import Presenter
+import Presentation
 
-class UserNavigator: Presenter.UserNavigator {
+class UserNavigator: Presentation.UserNavigator {
     weak var navigationController: UINavigationController?
 
     func navigateToMap() {

@@ -15,11 +15,11 @@
 		8302FA641FD32C4F00415265 /* UserLocationViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8302FA631FD32C4F00415265 /* UserLocationViewFactory.swift */; };
 		8316E5C31FD3360500075F12 /* DataTransformer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5BE1FD335F600075F12 /* DataTransformer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8316E5C71FD3360500075F12 /* Entity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5C01FD335F600075F12 /* Entity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8316E5C91FD3360500075F12 /* Presenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5C11FD335F600075F12 /* Presenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8316E5CB1FD3360500075F12 /* DataProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5B91FD335F000075F12 /* DataProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8316E5D91FD338F100075F12 /* UseCase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5D71FD338D600075F12 /* UseCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8316E6161FD33D8900075F12 /* GetLocationUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8316E6141FD33D8900075F12 /* GetLocationUseCaseFactory.swift */; };
 		8316E6181FD33D9A00075F12 /* GetUserUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8316E6171FD33D9A00075F12 /* GetUserUseCaseFactory.swift */; };
+		834F6B041FD49CC7009A913A /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 834F6B021FD49CBE009A913A /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		835E10281FD2ABEE006CCE83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E10271FD2ABEE006CCE83 /* AppDelegate.swift */; };
 		835E102A1FD2ABEE006CCE83 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E10291FD2ABEE006CCE83 /* UserViewController.swift */; };
 		835E102F1FD2ABEE006CCE83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 835E102E1FD2ABEE006CCE83 /* Assets.xcassets */; };
@@ -64,8 +64,8 @@
 				8316E5D91FD338F100075F12 /* UseCase.framework in Embed Frameworks */,
 				8302FA601FD323FA00415265 /* StorageService.framework in Embed Frameworks */,
 				8316E5CB1FD3360500075F12 /* DataProvider.framework in Embed Frameworks */,
-				8316E5C91FD3360500075F12 /* Presenter.framework in Embed Frameworks */,
 				8302FA5D1FD323FA00415265 /* LocationService.framework in Embed Frameworks */,
+				834F6B041FD49CC7009A913A /* Presentation.framework in Embed Frameworks */,
 				8302FA5A1FD323FA00415265 /* ApiService.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -86,13 +86,11 @@
 		8302FA631FD32C4F00415265 /* UserLocationViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationViewFactory.swift; sourceTree = "<group>"; };
 		8316E5B91FD335F000075F12 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8316E5BE1FD335F600075F12 /* DataTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8316E5BF1FD335F600075F12 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8316E5C01FD335F600075F12 /* Entity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8316E5C11FD335F600075F12 /* Presenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8316E5D71FD338D600075F12 /* UseCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UseCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8316E60E1FD33D1B00075F12 /* UseCaseProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UseCaseProvider.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/CleanArchitecture-brrlgwqfvuqlodcjxfkgxrtwacqi/Build/Products/Debug-iphoneos/UseCaseProvider.framework"; sourceTree = "<group>"; };
 		8316E6141FD33D8900075F12 /* GetLocationUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationUseCaseFactory.swift; sourceTree = "<group>"; };
 		8316E6171FD33D9A00075F12 /* GetUserUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserUseCaseFactory.swift; sourceTree = "<group>"; };
+		834F6B021FD49CBE009A913A /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835E10241FD2ABEE006CCE83 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835E10271FD2ABEE006CCE83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		835E10291FD2ABEE006CCE83 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 		835E10491FD2ABEE006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A58A5A1FD48F7D00A38BB5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		83A58A5C1FD4915E00A38BB5 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
-		83B93F191FD304E6001CA8A2 /* Transformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Transformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B93F2D1FD30816001CA8A2 /* UserNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNavigator.swift; sourceTree = "<group>"; };
 		83B93F2F1FD30897001CA8A2 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		83B93F311FD30E9F001CA8A2 /* UserLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationViewController.swift; sourceTree = "<group>"; };
@@ -255,18 +252,15 @@
 		83B93ECA1FD2AD41001CA8A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				834F6B021FD49CBE009A913A /* Presentation.framework */,
 				8316E5D71FD338D600075F12 /* UseCase.framework */,
-				8316E60E1FD33D1B00075F12 /* UseCaseProvider.framework */,
 				8316E5BE1FD335F600075F12 /* DataTransformer.framework */,
-				8316E5BF1FD335F600075F12 /* Domain.framework */,
 				8316E5C01FD335F600075F12 /* Entity.framework */,
-				8316E5C11FD335F600075F12 /* Presenter.framework */,
 				8316E5B91FD335F000075F12 /* DataProvider.framework */,
 				8302FA5E1FD323FA00415265 /* StorageService.framework */,
 				8302FA5B1FD323FA00415265 /* LocationService.framework */,
 				8302FA581FD323FA00415265 /* ApiService.framework */,
 				8302FA571FD323DA00415265 /* CoreLocation.framework */,
-				83B93F191FD304E6001CA8A2 /* Transformer.framework */,
 				9709192D93C27218ADD20974 /* Pods_App.framework */,
 				8029490760B0B82B7DCE4E2D /* Pods_AppTests.framework */,
 				48E55326F4D9548686E7133D /* Pods_AppUITests.framework */,

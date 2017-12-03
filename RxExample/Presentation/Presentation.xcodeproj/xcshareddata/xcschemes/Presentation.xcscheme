@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "83714E491FD2ACFD0081B39E"
-               BuildableName = "Presenter.framework"
-               BlueprintName = "Presenter"
-               ReferencedContainer = "container:Presenter.xcodeproj">
+               BuildableName = "Presentation.framework"
+               BlueprintName = "Presentation"
+               ReferencedContainer = "container:Presentation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,26 +29,7 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83714E521FD2ACFD0081B39E"
-               BuildableName = "PresenterTests.xctest"
-               BlueprintName = "PresenterTests"
-               ReferencedContainer = "container:Presenter.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "83714E491FD2ACFD0081B39E"
-            BuildableName = "Presenter.framework"
-            BlueprintName = "Presenter"
-            ReferencedContainer = "container:Presenter.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -67,9 +48,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "83714E491FD2ACFD0081B39E"
-            BuildableName = "Presenter.framework"
-            BlueprintName = "Presenter"
-            ReferencedContainer = "container:Presenter.xcodeproj">
+            BuildableName = "Presentation.framework"
+            BlueprintName = "Presentation"
+            ReferencedContainer = "container:Presentation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "83714E491FD2ACFD0081B39E"
-            BuildableName = "Presenter.framework"
-            BlueprintName = "Presenter"
-            ReferencedContainer = "container:Presenter.xcodeproj">
+            BuildableName = "Presentation.framework"
+            BlueprintName = "Presentation"
+            ReferencedContainer = "container:Presentation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

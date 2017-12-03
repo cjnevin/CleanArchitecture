@@ -1,7 +1,7 @@
 import XCTest
-@testable import Presenter
+@testable import Presentation
 
-class PresenterTests: XCTestCase {
+class PresentationTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

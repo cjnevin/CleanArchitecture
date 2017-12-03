@@ -9,7 +9,7 @@
       </FileRef>
    </Group>
    <FileRef
-      location = "group:Presenter/Presenter.xcodeproj">
+      location = "group:Presentation/Presentation.xcodeproj">
    </FileRef>
    <Group
       location = "container:"

@@ -36,14 +36,14 @@ target 'App' do
   end
 end
 
-target 'Presenter' do
-  project 'Presenter/Presenter.xcodeproj'
+target 'Presentation' do
+  project 'Presentation/Presentation.xcodeproj'
   use_frameworks!
   rxcocoa
   rxswift
   action
 
-  target 'PresenterTests' do
+  target 'PresentationTests' do
     inherit! :search_paths
     rxcocoa
     rxswift
