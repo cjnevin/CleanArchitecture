@@ -64,10 +64,12 @@ Example(s): `ApiService`, `LocationService`, `StorageService`
 
 Unit tested with mock `DataTransformer`.
 
-## Presenter (Framework)
+## Presentation (Framework)
 Imports `Entity`
 
 Imports `UseCase`
+
+### Presenter (MVP)
 
 Defines Interface of `View`
 
@@ -81,8 +83,20 @@ Example(s): `UserListPresenter`, `UserDetailPresenter`, `UserLocationPresenter`
 
 Unit tested with mock `View` and `Navigator`.
 
+### ViewModel (MVVM)
+
+Defines Interface of `Navigator`
+
+Exposes `Entity` data from `UseCase` to `ViewModel`. `View` is responsible for `Rx` binding.
+
+Navigates between `Presenter`'s using `Navigator`.
+
+Example(s): `UserListViewModel`, `UserDetailViewModel`, `UserLocationViewModel`
+
+Unit tested with `RxTest` framework and mock `Navigator`.
+
 ## Platform (Executable)
-Imports `Presenter`
+Imports `Presentation`
 
 Imports `Entity`
 
