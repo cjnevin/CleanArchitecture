@@ -3,7 +3,7 @@ My take on Uncle Bob's clean architecture in Swift.
 
 *There are two example projects:*
 - **Example** (no asynchronous events, everything returns immediately)
-- **RxExample** (asynchronous)
+- **RxExample** (asynchronous, RxSwift, RxCocoa, Action)
 
 The workspaces are comprised of 5 main frameworks with each service having an additional framework and each platform having an additional app.
 
