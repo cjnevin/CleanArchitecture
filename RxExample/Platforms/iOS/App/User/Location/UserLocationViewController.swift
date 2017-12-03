@@ -15,10 +15,7 @@ class UserLocationViewController: UIViewController {
 			
 			if let viewModel = viewModel {
 				singleDisposable.setDisposable(
-					viewModel.rx.location()
-						.drive(onNext: { [weak self] location in
-							self?.mapView.setLocation(location)
-						})
+					viewModel.rx.location().drive(mapView.rx.location)
 				)
 			}
 		}
@@ -44,11 +41,13 @@ class UserLocationViewController: UIViewController {
 	}
 }
 
-private extension MKMapView {
-	func setLocation(_ location: Location) {
-		removeAnnotations(annotations.filter { $0 is MKPlacemark })
-		addAnnotation(location.asPlacemark())
-		centerCoordinate = location.asCoordinate()
+private extension Reactive where Base: MKMapView {
+	var location: Binder<Location> {
+		return Binder<Location>(self.base) { (view, location) -> () in
+			view.removeAnnotations(view.annotations.filter { $0 is MKPlacemark })
+			view.addAnnotation(location.asPlacemark())
+			view.centerCoordinate = location.asCoordinate()
+		}
 	}
 }
 
