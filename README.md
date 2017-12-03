@@ -51,7 +51,7 @@ Examples(s): `UserJsonTransformer`, `UserRealmTransformer`, `LocationCLLocationT
 
 Unit tested.
 
-## Service (Framework for Each)
+## Service (Framework for each)
 Imports `DataProvider`
 
 Imports `Entity`
@@ -95,7 +95,7 @@ Example(s): `UserListViewModel`, `UserDetailViewModel`, `UserLocationViewModel`
 
 Unit tested with `RxTest` framework and mock `Navigator`.
 
-## Platform (App for each Platform)
+## Platform (App for each)
 Imports `Presentation`
 
 Imports `Entity`
