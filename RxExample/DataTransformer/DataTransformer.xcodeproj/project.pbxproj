@@ -10,8 +10,9 @@
 		0867654519522B2D0CE72F77 /* Pods_DataTransformerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144B56D0A6CCB43FADCF8ACD /* Pods_DataTransformerTests.framework */; };
 		219AC431B0B34CB95D90182E /* Pods_DataTransformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01182439AFF443E69DE4A9C4 /* Pods_DataTransformer.framework */; };
 		8316E5901FD3353200075F12 /* Entity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5911FD3353200075F12 /* Entity.framework */; };
+		834F6B061FD4ACF0009A913A /* LocationCLLocationTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F6B051FD4ACF0009A913A /* LocationCLLocationTransformerTests.swift */; };
+		834F6B081FD4AEA7009A913A /* UserJsonDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F6B071FD4AEA7009A913A /* UserJsonDataTransformer.swift */; };
 		835E108D1FD2AC46006CCE83 /* DataTransformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835E10831FD2AC45006CCE83 /* DataTransformer.framework */; };
-		835E10921FD2AC46006CCE83 /* DataTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E10911FD2AC46006CCE83 /* DataTransformerTests.swift */; };
 		835E10941FD2AC46006CCE83 /* DataTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E10861FD2AC45006CCE83 /* DataTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83B93EF81FD2E966001CA8A2 /* LocationCLLocationTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93EF71FD2E966001CA8A2 /* LocationCLLocationTransformer.swift */; };
 		83B93EFA1FD2E977001CA8A2 /* TwoWayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93EF91FD2E977001CA8A2 /* TwoWayTransformer.swift */; };
@@ -37,11 +38,12 @@
 		362114D299BC4E63AB423B6A /* Pods-DataTransformer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataTransformer.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DataTransformer/Pods-DataTransformer.debug.xcconfig"; sourceTree = "<group>"; };
 		42D721A2A09BED68416208BC /* Pods-DataTransformerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataTransformerTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DataTransformerTests/Pods-DataTransformerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8316E5911FD3353200075F12 /* Entity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		834F6B051FD4ACF0009A913A /* LocationCLLocationTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCLLocationTransformerTests.swift; sourceTree = "<group>"; };
+		834F6B071FD4AEA7009A913A /* UserJsonDataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJsonDataTransformer.swift; sourceTree = "<group>"; };
 		835E10831FD2AC45006CCE83 /* DataTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835E10861FD2AC45006CCE83 /* DataTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTransformer.h; sourceTree = "<group>"; };
 		835E10871FD2AC45006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835E108C1FD2AC46006CCE83 /* DataTransformerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTransformerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		835E10911FD2AC46006CCE83 /* DataTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformerTests.swift; sourceTree = "<group>"; };
 		835E10931FD2AC46006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83B93EDC1FD2AD82001CA8A2 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B93EF71FD2E966001CA8A2 /* LocationCLLocationTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCLLocationTransformer.swift; sourceTree = "<group>"; };
@@ -119,7 +121,8 @@
 		835E10901FD2AC46006CCE83 /* DataTransformerTests */ = {
 			isa = PBXGroup;
 			children = (
-				835E10911FD2AC46006CCE83 /* DataTransformerTests.swift */,
+				834F6B051FD4ACF0009A913A /* LocationCLLocationTransformerTests.swift */,
+				834F6B071FD4AEA7009A913A /* UserJsonDataTransformer.swift */,
 				835E10931FD2AC46006CCE83 /* Info.plist */,
 			);
 			path = DataTransformerTests;
@@ -350,7 +353,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				835E10921FD2AC46006CCE83 /* DataTransformerTests.swift in Sources */,
+				834F6B061FD4ACF0009A913A /* LocationCLLocationTransformerTests.swift in Sources */,
+				834F6B081FD4AEA7009A913A /* UserJsonDataTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,9 +533,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TransformerTests/Info.plist;
+				INFOPLIST_FILE = DataTransformerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cjnevin.TransformerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjnevin.DataTransformerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -544,9 +548,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TransformerTests/Info.plist;
+				INFOPLIST_FILE = DataTransformerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cjnevin.TransformerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjnevin.DataTransformerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

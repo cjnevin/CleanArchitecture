@@ -1,10 +1,6 @@
 import Foundation
 import Entity
 
-// Unfortunately you can't add Codable as an extension (yet!) of the Entity.User object
-// so we need to create a codable copy here and a transformer.
-//
-// This is important so we don't leak implementation details to the Model objects.
 private struct UserData: Codable {
     let firstName: String
     let lastName: String

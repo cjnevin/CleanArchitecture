@@ -11,10 +11,12 @@
 		8316E58E1FD3352900075F12 /* Entity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E58F1FD3352900075F12 /* Entity.framework */; };
 		8316E5D41FD338C200075F12 /* UseCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5D51FD338C200075F12 /* UseCase.framework */; };
 		835E10B11FD2AC56006CCE83 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835E10A71FD2AC56006CCE83 /* DataProvider.framework */; };
-		835E10B61FD2AC56006CCE83 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E10B51FD2AC56006CCE83 /* DataProviderTests.swift */; };
 		835E10B81FD2AC56006CCE83 /* DataProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E10AA1FD2AC56006CCE83 /* DataProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		839C06751FD4B62400E23058 /* UserProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C06741FD4B62400E23058 /* UserProviderTests.swift */; };
+		839C06771FD4BCD600E23058 /* Mock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C06781FD4BCD600E23058 /* Mock.framework */; };
 		83B93F041FD2FB77001CA8A2 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93F031FD2FB77001CA8A2 /* UserProvider.swift */; };
 		83B93F361FD319C1001CA8A2 /* UserLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93F351FD319C1001CA8A2 /* UserLocationProvider.swift */; };
+		83DE5E6E1FD4C389005CEC21 /* UserLocationProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE5E6D1FD4C389005CEC21 /* UserLocationProviderTests.swift */; };
 		AE4BCB16C5FC4B2F25388CD7 /* Pods_DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07D08CBA1AD489828365FD5 /* Pods_DataProvider.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,10 +39,13 @@
 		835E10AA1FD2AC56006CCE83 /* DataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
 		835E10AB1FD2AC56006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835E10B01FD2AC56006CCE83 /* DataProviderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataProviderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		835E10B51FD2AC56006CCE83 /* DataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
 		835E10B71FD2AC56006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839C06731FD4B58C00E23058 /* Mock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		839C06741FD4B62400E23058 /* UserProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProviderTests.swift; sourceTree = "<group>"; };
+		839C06781FD4BCD600E23058 /* Mock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B93F031FD2FB77001CA8A2 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		83B93F351FD319C1001CA8A2 /* UserLocationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationProvider.swift; sourceTree = "<group>"; };
+		83DE5E6D1FD4C389005CEC21 /* UserLocationProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationProviderTests.swift; sourceTree = "<group>"; };
 		A7F8C5CA616D96EA0232BDEB /* Pods-DataProviderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataProviderTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DataProviderTests/Pods-DataProviderTests.release.xcconfig"; sourceTree = "<group>"; };
 		C7DF79D6BA332117FD79172F /* Pods_DataProviderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataProviderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07D08CBA1AD489828365FD5 /* Pods_DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839C06771FD4BCD600E23058 /* Mock.framework in Frameworks */,
 				835E10B11FD2AC56006CCE83 /* DataProvider.framework in Frameworks */,
 				43B8FBB84DF1777809E4BD0A /* Pods_DataProviderTests.framework in Frameworks */,
 			);
@@ -115,7 +121,8 @@
 		835E10B41FD2AC56006CCE83 /* DataProviderTests */ = {
 			isa = PBXGroup;
 			children = (
-				835E10B51FD2AC56006CCE83 /* DataProviderTests.swift */,
+				839C06741FD4B62400E23058 /* UserProviderTests.swift */,
+				83DE5E6D1FD4C389005CEC21 /* UserLocationProviderTests.swift */,
 				835E10B71FD2AC56006CCE83 /* Info.plist */,
 			);
 			path = DataProviderTests;
@@ -124,6 +131,8 @@
 		83B93ED01FD2AD4C001CA8A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				839C06781FD4BCD600E23058 /* Mock.framework */,
+				839C06731FD4B58C00E23058 /* Mock.framework */,
 				8316E5D51FD338C200075F12 /* UseCase.framework */,
 				8316E58F1FD3352900075F12 /* Entity.framework */,
 				E07D08CBA1AD489828365FD5 /* Pods_DataProvider.framework */,
@@ -252,10 +261,14 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-DataProviderTests/Pods-DataProviderTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -344,7 +357,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				835E10B61FD2AC56006CCE83 /* DataProviderTests.swift in Sources */,
+				83DE5E6E1FD4C389005CEC21 /* UserLocationProviderTests.swift in Sources */,
+				839C06751FD4B62400E23058 /* UserProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,9 +537,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RepositoryTests/Info.plist;
+				INFOPLIST_FILE = DataProviderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cjnevin.RepositoryTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjnevin.DataProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,9 +552,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RepositoryTests/Info.plist;
+				INFOPLIST_FILE = DataProviderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cjnevin.RepositoryTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjnevin.DataProviderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

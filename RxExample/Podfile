@@ -13,6 +13,11 @@ def action
   pod 'Action'
 end
 
+def rxtest
+  pod 'RxTest'
+  pod 'RxBlocking'
+end
+
 def ui
   rxswift
   rxcocoa
@@ -59,17 +64,18 @@ target 'DataProvider' do
   target 'DataProviderTests' do
     inherit! :search_paths
     rxswift
+    rxtest
   end
 end
 
 target 'DataTransformer' do
   project 'DataTransformer/DataTransformer.xcodeproj'
   use_frameworks!
-  rxswift
+  # rxswift
 
   target 'DataTransformerTests' do
     inherit! :search_paths
-    rxswift
+    # rxswift
   end
 end
 

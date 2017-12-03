@@ -3,11 +3,13 @@ import UseCase
 import Entity
 import RxSwift
 
+//sourcery: AutoMockable
 public protocol UserStorageService {
     func getUser() -> Single<User>
     func setUser(_ user: User) -> Completable
 }
 
+//sourcery: AutoMockable
 public protocol UserApiService {
     func fetchUser() -> Single<User>
 }

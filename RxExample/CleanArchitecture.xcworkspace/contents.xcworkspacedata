@@ -37,6 +37,9 @@
       location = "group:Entity/Entity.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Mock/Mock.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
