@@ -1,0 +1,118 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.0'
+
+def rxswift
+  pod 'RxSwift'
+end
+
+def rxcocoa
+  pod 'RxCocoa'
+end
+
+def action
+  pod 'Action'
+end
+
+def ui
+  rxswift
+  rxcocoa
+  action
+end
+
+workspace 'CleanArchitecture.xcworkspace'
+target 'App' do
+  project 'Platforms/iOS/App.xcodeproj'
+  use_frameworks!
+  ui
+
+  target 'AppTests' do
+    inherit! :search_paths
+    ui
+  end
+
+  target 'AppUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
+
+target 'Presenter' do
+  project 'Presenter/Presenter.xcodeproj'
+  use_frameworks!
+  rxcocoa
+  rxswift
+  action
+
+  target 'PresenterTests' do
+    inherit! :search_paths
+    rxcocoa
+    rxswift
+    action
+  end
+end
+
+target 'DataProvider' do
+  project 'DataProvider/DataProvider.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'DataProviderTests' do
+    inherit! :search_paths
+    rxswift
+  end
+end
+
+target 'DataTransformer' do
+  project 'DataTransformer/DataTransformer.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'DataTransformerTests' do
+    inherit! :search_paths
+    rxswift
+  end
+end
+
+target 'UseCase' do
+  project 'UseCase/UseCase.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'UseCaseTests' do
+    inherit! :search_paths
+    rxswift
+  end
+end
+
+target 'ApiService' do
+  project 'Services/ApiService/ApiService.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'ApiServiceTests' do
+    inherit! :search_paths
+    rxswift
+  end
+end
+
+target 'LocationService' do
+  project 'Services/LocationService/LocationService.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'LocationServiceTests' do
+    inherit! :search_paths
+    rxswift
+  end
+end
+
+target 'StorageService' do
+  project 'Services/StorageService/StorageService.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'StorageServiceTests' do
+    inherit! :search_paths
+    rxswift
+  end
+end
