@@ -7,6 +7,8 @@ My take on Uncle Bob's clean architecture in Swift.
 
 The workspaces are comprised of 5 main frameworks with each service having an additional framework and each platform having an additional app.
 
+**Note:** These are just concepts and there is the possibility of combining some of these concepts into singular frameworks such as combining `Service` and `DataTransformer`. Or treating `DataTransformer` and `Service` as the same thing.
+
 ## Entity (Framework)
 Defines common object structure.
 
