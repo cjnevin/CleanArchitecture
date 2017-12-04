@@ -27,7 +27,7 @@ Examples: `GetLocationUseCase`, `GetUserListUseCase`, `GetUserDetailsUseCase`
 
 Unit tested with mock `DataProvider`.
 
-## ~~DataProvider (Framework)~~ (Combined with Service)
+## DataProvider (Framework)
 Imports `UseCase`
 
 Imports `Entity`
@@ -42,22 +42,7 @@ Example(s): `UserListProvider`, `LocationProvider`
 
 Unit tested with mock `Service`.
 
-## Service (Framework for each)
-Imports `DataProvider`
-
-Imports `Entity`
-
-Defines Interface of `DataTransformer`
-
-Implementation of a **single** service, calls `DataTransformer` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `Entity`.
-
-Services may be composable. For example, a `UserListService` may check `StorageService` first before calling `ApiService`, if `ApiService` succeeds then a `UserList` is passed back to the `StorageService` and the `UserList` is returned.
-
-Example(s): `ApiService`, `LocationService`, `StorageService`
-
-Unit tested with mock `DataTransformer`.
-
-### DataTransformer (Part of each Service)
+## DataTransformer (Framework)
 Imports `...Service`
 
 Imports `Entity`
@@ -67,6 +52,19 @@ Transforms or maps data from one structure to another.
 Examples(s): `UserJsonTransformer`, `UserRealmTransformer`, `LocationCLLocationTransformer`
 
 Unit tested.
+
+## Service (Framework for each)
+Imports `DataProvider`
+
+Imports `Entity`
+
+Defines Interface of `DataTransformer`
+
+Implementation of a **single** service, calls `DataTransformer` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `Entity`.
+
+Example(s): `ApiService`, `LocationService`, `StorageService`
+
+Unit tested with mock `DataTransformer`.
 
 ## Presentation (Framework)
 Imports `Entity`
