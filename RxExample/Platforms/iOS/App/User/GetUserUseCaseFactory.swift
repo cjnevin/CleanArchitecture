@@ -1,5 +1,4 @@
 import Foundation
-import DataTransformer
 import StorageService
 import ApiService
 import DataProvider
@@ -9,9 +8,8 @@ struct GetUserUseCaseFactory {
     private let provider: DataProvider.UserProvider
 
     init() {
-        let transformer = UserJsonDataTransformer()
         let storage = UserStorageService()
-        let api = UserApiService(transformer: transformer)
+        let api = UserApiService()
         self.provider = UserProvider(storage: storage, api: api)
     }
 

@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		49007D1A5281276439897DAC /* Pods_LocationServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4831B6D805D50740B07269 /* Pods_LocationServiceTests.framework */; };
 		8302FA801FD3336A00415265 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8302FA811FD3336A00415265 /* DataProvider.framework */; };
-		8302FA8A1FD3346000415265 /* DataTransformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8302FA8B1FD3346000415265 /* DataTransformer.framework */; };
 		8316E5CE1FD3367000075F12 /* Entity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5CF1FD3367000075F12 /* Entity.framework */; };
+		8337C2EE1FD60FF40032B6AC /* LocationCLLocationTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337C2ED1FD60FF40032B6AC /* LocationCLLocationTransformer.swift */; };
+		8337C2F01FD60FFB0032B6AC /* LocationCLLocationTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337C2EF1FD60FFB0032B6AC /* LocationCLLocationTransformerTests.swift */; };
 		8376E2DF1FD31F9500DC7399 /* LocationService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8376E2D51FD31F9500DC7399 /* LocationService.framework */; };
 		8376E2E41FD31F9500DC7399 /* LocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8376E2E31FD31F9500DC7399 /* LocationServiceTests.swift */; };
 		8376E2E61FD31F9600DC7399 /* LocationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 8376E2D81FD31F9500DC7399 /* LocationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +36,8 @@
 		8302FA811FD3336A00415265 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8302FA8B1FD3346000415265 /* DataTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8316E5CF1FD3367000075F12 /* Entity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8337C2ED1FD60FF40032B6AC /* LocationCLLocationTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCLLocationTransformer.swift; sourceTree = "<group>"; };
+		8337C2EF1FD60FFB0032B6AC /* LocationCLLocationTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCLLocationTransformerTests.swift; sourceTree = "<group>"; };
 		8376E2D51FD31F9500DC7399 /* LocationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8376E2D81FD31F9500DC7399 /* LocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		8376E2D91FD31F9500DC7399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +59,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8316E5CE1FD3367000075F12 /* Entity.framework in Frameworks */,
-				8302FA8A1FD3346000415265 /* DataTransformer.framework in Frameworks */,
 				8302FA801FD3336A00415265 /* DataProvider.framework in Frameworks */,
 				D0A28CE2F53AAA5DC5979DDC /* Pods_LocationService.framework in Frameworks */,
 			);
@@ -99,6 +101,7 @@
 			children = (
 				8376E2D81FD31F9500DC7399 /* LocationService.h */,
 				8376E2EF1FD31FC000DC7399 /* CurrentLocationService.swift */,
+				8337C2ED1FD60FF40032B6AC /* LocationCLLocationTransformer.swift */,
 				8376E2D91FD31F9500DC7399 /* Info.plist */,
 			);
 			path = LocationService;
@@ -108,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				8376E2E31FD31F9500DC7399 /* LocationServiceTests.swift */,
+				8337C2EF1FD60FFB0032B6AC /* LocationCLLocationTransformerTests.swift */,
 				8376E2E51FD31F9600DC7399 /* Info.plist */,
 			);
 			path = LocationServiceTests;
@@ -341,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8337C2EE1FD60FF40032B6AC /* LocationCLLocationTransformer.swift in Sources */,
 				8376E2F01FD31FC000DC7399 /* CurrentLocationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8337C2F01FD60FFB0032B6AC /* LocationCLLocationTransformerTests.swift in Sources */,
 				8376E2E41FD31F9500DC7399 /* LocationServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

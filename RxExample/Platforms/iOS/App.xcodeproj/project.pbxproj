@@ -13,7 +13,6 @@
 		8302FA601FD323FA00415265 /* StorageService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8302FA5E1FD323FA00415265 /* StorageService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8302FA621FD32BA900415265 /* UserViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8302FA611FD32BA900415265 /* UserViewFactory.swift */; };
 		8302FA641FD32C4F00415265 /* UserLocationViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8302FA631FD32C4F00415265 /* UserLocationViewFactory.swift */; };
-		8316E5C31FD3360500075F12 /* DataTransformer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5BE1FD335F600075F12 /* DataTransformer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8316E5C71FD3360500075F12 /* Entity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5C01FD335F600075F12 /* Entity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8316E5CB1FD3360500075F12 /* DataProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5B91FD335F000075F12 /* DataProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8316E5D91FD338F100075F12 /* UseCase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5D71FD338D600075F12 /* UseCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -59,7 +58,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8316E5C31FD3360500075F12 /* DataTransformer.framework in Embed Frameworks */,
 				8316E5C71FD3360500075F12 /* Entity.framework in Embed Frameworks */,
 				8316E5D91FD338F100075F12 /* UseCase.framework in Embed Frameworks */,
 				8302FA601FD323FA00415265 /* StorageService.framework in Embed Frameworks */,

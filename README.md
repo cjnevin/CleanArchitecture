@@ -42,17 +42,6 @@ Example(s): `UserListProvider`, `LocationProvider`
 
 Unit tested with mock `Service`.
 
-## DataTransformer (Framework)
-Imports `...Service`
-
-Imports `Entity`
-
-Transforms or maps data from one structure to another.
-
-Examples(s): `UserJsonTransformer`, `UserRealmTransformer`, `LocationCLLocationTransformer`
-
-Unit tested.
-
 ## Service (Framework for each)
 Imports `DataProvider`
 
@@ -65,6 +54,15 @@ Implementation of a **single** service, calls `DataTransformer` to mutate betwee
 Example(s): `ApiService`, `LocationService`, `StorageService`
 
 Unit tested with mock `DataTransformer`.
+
+### DataTransformer (Part of each Service)
+Imports `Entity`
+
+Transforms data from `Service` data type to `Model` data type.
+
+Examples(s): `UserJsonTransformer`, `UserRealmTransformer`, `LocationCLLocationTransformer`
+
+Unit tested.
 
 ## Presentation (Framework)
 Imports `Entity`

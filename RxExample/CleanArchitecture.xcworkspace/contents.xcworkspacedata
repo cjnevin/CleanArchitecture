@@ -28,9 +28,6 @@
       location = "group:DataProvider/DataProvider.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DataTransformer/DataTransformer.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:UseCase/UseCase.xcodeproj">
    </FileRef>
    <FileRef

@@ -1,6 +1,5 @@
 import UIKit
 import Presentation
-import DataTransformer
 
 struct UserViewFactory {
     private let useCaseFactory = GetUserUseCaseFactory()

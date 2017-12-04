@@ -1,14 +1,13 @@
 import Foundation
 import DataProvider
 import Entity
-import DataTransformer
 import RxSwift
 
 public struct UserApiService: DataProvider.UserApiService {
     private let transformer: UserJsonDataTransformer
 
-    public init(transformer: UserJsonDataTransformer) {
-        self.transformer = transformer
+    public init() {
+        transformer = UserJsonDataTransformer()
     }
 
     private func fakeData() -> Data {

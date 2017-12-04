@@ -1,7 +1,7 @@
 import XCTest
 import Entity
 import CoreLocation
-@testable import DataTransformer
+@testable import ApiService
 
 class UserJsonDataTransformerTests: XCTestCase {
     var transformer: UserJsonDataTransformer!

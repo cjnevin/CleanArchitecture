@@ -1,7 +1,6 @@
 import Foundation
 import DataProvider
 import Entity
-import DataTransformer
 import CoreLocation
 import RxSwift
 
@@ -10,8 +9,8 @@ public class CurrentLocationService: DataProvider.LocationService {
     private let locationManager: CLLocationManager
     private let locationManagerDelegate: LocationManagerDelegate
 
-    public init(transformer: LocationCLLocationTransformer) {
-        self.transformer = transformer
+    public init() {
+        self.transformer = LocationCLLocationTransformer()
         self.locationManager = CLLocationManager()
         self.locationManagerDelegate = LocationManagerDelegate()
         self.locationManager.delegate = self.locationManagerDelegate
