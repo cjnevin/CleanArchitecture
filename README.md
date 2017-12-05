@@ -5,9 +5,7 @@ My take on Uncle Bob's clean architecture in Swift.
 - **Example** (no asynchronous events, everything returns immediately)
 - **RxExample** (asynchronous, RxSwift, RxCocoa, Action)
 
-The workspaces are comprised of 5 main frameworks with each service having an additional framework and each platform having an additional app.
-
-**Note:** These are just concepts and there is the possibility of combining some of these concepts into singular frameworks such as combining `Service` and `DataTransformer`. Or treating `DataProvider` and `Service` as the same thing.
+The workspaces are comprised of 4 main frameworks with each service having an additional framework and each platform having an additional app.
 
 ## Entity (Framework)
 Defines common object structure.
