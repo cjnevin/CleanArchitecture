@@ -1,5 +1,5 @@
 import UIKit
-import Entity
+import Model
 import Presentation
 import RxSwift
 import RxCocoa

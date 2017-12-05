@@ -1,6 +1,6 @@
 import Foundation
 import CoreLocation
-import Entity
+import Model
 
 struct LocationCLLocationTransformer {
     func transform(_ object: CLLocation) -> Location {

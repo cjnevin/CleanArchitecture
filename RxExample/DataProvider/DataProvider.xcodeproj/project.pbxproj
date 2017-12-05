@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		43B8FBB84DF1777809E4BD0A /* Pods_DataProviderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DF79D6BA332117FD79172F /* Pods_DataProviderTests.framework */; };
-		8316E58E1FD3352900075F12 /* Entity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E58F1FD3352900075F12 /* Entity.framework */; };
 		8316E5D41FD338C200075F12 /* UseCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5D51FD338C200075F12 /* UseCase.framework */; };
+		8337C3031FD687DC0032B6AC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C3041FD687DC0032B6AC /* Model.framework */; };
 		835E10B11FD2AC56006CCE83 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835E10A71FD2AC56006CCE83 /* DataProvider.framework */; };
 		835E10B81FD2AC56006CCE83 /* DataProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E10AA1FD2AC56006CCE83 /* DataProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		839C06751FD4B62400E23058 /* UserProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C06741FD4B62400E23058 /* UserProviderTests.swift */; };
@@ -33,14 +33,13 @@
 /* Begin PBXFileReference section */
 		29A50638ECFD2378539FAEED /* Pods-DataProviderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataProviderTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DataProviderTests/Pods-DataProviderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80A1A4775AA4CE7C2474D606 /* Pods-DataProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataProvider.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DataProvider/Pods-DataProvider.debug.xcconfig"; sourceTree = "<group>"; };
-		8316E58F1FD3352900075F12 /* Entity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8316E5D51FD338C200075F12 /* UseCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UseCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8337C3041FD687DC0032B6AC /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835E10A71FD2AC56006CCE83 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835E10AA1FD2AC56006CCE83 /* DataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
 		835E10AB1FD2AC56006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835E10B01FD2AC56006CCE83 /* DataProviderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataProviderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		835E10B71FD2AC56006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		839C06731FD4B58C00E23058 /* Mock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		839C06741FD4B62400E23058 /* UserProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProviderTests.swift; sourceTree = "<group>"; };
 		839C06781FD4BCD600E23058 /* Mock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B93F031FD2FB77001CA8A2 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
@@ -58,7 +57,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8316E5D41FD338C200075F12 /* UseCase.framework in Frameworks */,
-				8316E58E1FD3352900075F12 /* Entity.framework in Frameworks */,
 				AE4BCB16C5FC4B2F25388CD7 /* Pods_DataProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8337C3031FD687DC0032B6AC /* Model.framework in Frameworks */,
 				839C06771FD4BCD600E23058 /* Mock.framework in Frameworks */,
 				835E10B11FD2AC56006CCE83 /* DataProvider.framework in Frameworks */,
 				43B8FBB84DF1777809E4BD0A /* Pods_DataProviderTests.framework in Frameworks */,
@@ -131,10 +130,9 @@
 		83B93ED01FD2AD4C001CA8A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8337C3041FD687DC0032B6AC /* Model.framework */,
 				839C06781FD4BCD600E23058 /* Mock.framework */,
-				839C06731FD4B58C00E23058 /* Mock.framework */,
 				8316E5D51FD338C200075F12 /* UseCase.framework */,
-				8316E58F1FD3352900075F12 /* Entity.framework */,
 				E07D08CBA1AD489828365FD5 /* Pods_DataProvider.framework */,
 				C7DF79D6BA332117FD79172F /* Pods_DataProviderTests.framework */,
 			);

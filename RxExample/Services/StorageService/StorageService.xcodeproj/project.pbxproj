@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4ECC0ABB1DDA4F58CBE645E6 /* Pods_StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB73388AE213543B74AB06A /* Pods_StorageService.framework */; };
 		8302FA821FD3336E00415265 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8302FA831FD3336E00415265 /* DataProvider.framework */; };
-		8316E5D01FD3367500075F12 /* Entity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5D11FD3367500075F12 /* Entity.framework */; };
+		8337C2F31FD687470032B6AC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C2F41FD687470032B6AC /* Model.framework */; };
 		835F8A3B1FD321070005397C /* UserStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835F8A3A1FD321070005397C /* UserStorageService.swift */; };
 		83EFF4601FD320E3002C8AD2 /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EFF4561FD320E3002C8AD2 /* StorageService.framework */; };
 		83EFF4651FD320E3002C8AD2 /* StorageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF4641FD320E3002C8AD2 /* StorageServiceTests.swift */; };
@@ -31,13 +31,8 @@
 		4345585440A7353469C9D88C /* Pods-StorageService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorageService.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-StorageService/Pods-StorageService.release.xcconfig"; sourceTree = "<group>"; };
 		4BB73388AE213543B74AB06A /* Pods_StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8302FA831FD3336E00415265 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8302FA851FD3337600415265 /* Transformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Transformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8302FA8D1FD3346600415265 /* DataTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8316E5D11FD3367500075F12 /* Entity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8337C2F41FD687470032B6AC /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835F8A3A1FD321070005397C /* UserStorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStorageService.swift; sourceTree = "<group>"; };
-		835F8A401FD321130005397C /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		835F8A411FD321130005397C /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		835F8A421FD321130005397C /* Transformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Transformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EFF4561FD320E3002C8AD2 /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EFF4591FD320E3002C8AD2 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		83EFF45A1FD320E3002C8AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8316E5D01FD3367500075F12 /* Entity.framework in Frameworks */,
+				8337C2F31FD687470032B6AC /* Model.framework in Frameworks */,
 				8302FA821FD3336E00415265 /* DataProvider.framework in Frameworks */,
 				4ECC0ABB1DDA4F58CBE645E6 /* Pods_StorageService.framework in Frameworks */,
 			);
@@ -87,13 +82,8 @@
 		835F8A3C1FD321130005397C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8316E5D11FD3367500075F12 /* Entity.framework */,
-				8302FA8D1FD3346600415265 /* DataTransformer.framework */,
-				8302FA851FD3337600415265 /* Transformer.framework */,
+				8337C2F41FD687470032B6AC /* Model.framework */,
 				8302FA831FD3336E00415265 /* DataProvider.framework */,
-				835F8A401FD321130005397C /* Model.framework */,
-				835F8A411FD321130005397C /* Repository.framework */,
-				835F8A421FD321130005397C /* Transformer.framework */,
 				4BB73388AE213543B74AB06A /* Pods_StorageService.framework */,
 				B1B5AF9136FC1EBE9FDF7B26 /* Pods_StorageServiceTests.framework */,
 			);

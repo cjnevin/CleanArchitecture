@@ -7,7 +7,7 @@ My take on Uncle Bob's clean architecture in Swift.
 
 The workspaces are comprised of 4 main frameworks with each service having an additional framework and each platform having an additional app.
 
-## Entity (Framework)
+## Model (Framework)
 Defines common object structure.
 
 Examples: `Location`, `User`, `UserList`
@@ -15,7 +15,7 @@ Examples: `Location`, `User`, `UserList`
 Unit tests not needed unless files provide helper methods.
 
 ## UseCase (Framework)
-Imports `Entity`
+Imports `Model`
 
 Defines Interface of `DataProvider`'s
 
@@ -28,7 +28,7 @@ Unit tested with mock `DataProvider`.
 ## DataProvider (Framework)
 Imports `UseCase`
 
-Imports `Entity`
+Imports `Model`
 
 Defines Interface of `Service`'s
 
@@ -43,18 +43,18 @@ Unit tested with mock `Service`.
 ## Service (Framework for each)
 Imports `DataProvider`
 
-Imports `Entity`
+Imports `Model`
 
 Defines Interface of `DataTransformer`
 
-Implementation of a **single** service, calls `DataTransformer` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `Entity`.
+Implementation of a **single** service, calls `DataTransformer` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `Model`.
 
 Example(s): `ApiService`, `LocationService`, `StorageService`
 
 Unit tested with mock `DataTransformer`.
 
 ### DataTransformer (Part of each Service)
-Imports `Entity`
+Imports `Model`
 
 Transforms data from `Service` data type to `Model` data type.
 
@@ -63,7 +63,7 @@ Examples(s): `UserJsonTransformer`, `UserRealmTransformer`, `LocationCLLocationT
 Unit tested.
 
 ## Presentation (Framework)
-Imports `Entity`
+Imports `Model`
 
 Imports `UseCase`
 
@@ -73,7 +73,7 @@ Defines Interface of `View`
 
 Defines Interface of `Navigator`
 
-Shows `Entity` data from `UseCase` on `View`.
+Shows `Model` data from `UseCase` on `View`.
 
 Navigates between `Presenter`'s using `Navigator`.
 
@@ -85,7 +85,7 @@ Unit tested with mock `View` and `Navigator`.
 
 Defines Interface of `Navigator`
 
-Exposes `Entity` data from `UseCase` to `ViewModel`. `View` is responsible for `Rx` binding.
+Exposes `Model` data from `UseCase` to `ViewModel`. `View` is responsible for `Rx` binding.
 
 Exposes `Action` to navigate using `Navigator`.
 
@@ -96,7 +96,7 @@ Unit tested with `RxTest` framework and mock `Navigator`.
 ## Platform (App for each)
 Imports `Presentation`
 
-Imports `Entity`
+Imports `Model`
 
 Implementation of `View` interfaces defined in `Presenter`.
 
@@ -112,8 +112,6 @@ Unit testing optional.
 
 ### UseCaseFactory/Provider (Part of Platform)
 
-Injects `DataTransformer` into `...Service`.
-
 Injects `...Service` into `DataProvider`.
 
 Injects `DataProvider` into `UseCase`.
@@ -125,8 +123,6 @@ Provides use cases to `Presenter`.
 Unit testing not necessary, no business logic exists in this framework.
 
 ### ViewFactory/Configurator (Part of Platform, one for each `View`)
-
-Imports `DataTransformer`
 
 Imports `UseCaseFactory`
 

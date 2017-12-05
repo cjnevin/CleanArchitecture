@@ -1,6 +1,6 @@
 import Foundation
 import UseCase
-import Entity
+import Model
 import RxSwift
 
 public protocol UserStorageService {

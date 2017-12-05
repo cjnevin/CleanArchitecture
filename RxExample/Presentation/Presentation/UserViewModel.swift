@@ -1,5 +1,5 @@
 import Foundation
-import Entity
+import Model
 import UseCase
 import RxCocoa
 import RxSwift

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "835E10EE1FD2AC72006CCE83"
-               BuildableName = "Entity.framework"
-               BlueprintName = "Entity"
-               ReferencedContainer = "container:Entity.xcodeproj">
+               BuildableName = "Model.framework"
+               BlueprintName = "Model"
+               ReferencedContainer = "container:Model.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "835E10F71FD2AC72006CCE83"
-               BuildableName = "EntityTests.xctest"
-               BlueprintName = "EntityTests"
-               ReferencedContainer = "container:Entity.xcodeproj">
+               BuildableName = "ModelTests.xctest"
+               BlueprintName = "ModelTests"
+               ReferencedContainer = "container:Model.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "835E10EE1FD2AC72006CCE83"
-            BuildableName = "Entity.framework"
-            BlueprintName = "Entity"
-            ReferencedContainer = "container:Entity.xcodeproj">
+            BuildableName = "Model.framework"
+            BlueprintName = "Model"
+            ReferencedContainer = "container:Model.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,9 +67,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "835E10EE1FD2AC72006CCE83"
-            BuildableName = "Entity.framework"
-            BlueprintName = "Entity"
-            ReferencedContainer = "container:Entity.xcodeproj">
+            BuildableName = "Model.framework"
+            BlueprintName = "Model"
+            ReferencedContainer = "container:Model.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "835E10EE1FD2AC72006CCE83"
-            BuildableName = "Entity.framework"
-            BlueprintName = "Entity"
-            ReferencedContainer = "container:Entity.xcodeproj">
+            BuildableName = "Model.framework"
+            BlueprintName = "Model"
+            ReferencedContainer = "container:Model.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

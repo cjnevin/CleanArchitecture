@@ -1,6 +1,6 @@
 import Foundation
 import DataProvider
-import Entity
+import Model
 import RxSwift
 
 public struct UserStorageService: DataProvider.UserStorageService {

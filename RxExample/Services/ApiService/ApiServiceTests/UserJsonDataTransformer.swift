@@ -1,5 +1,5 @@
 import XCTest
-import Entity
+import Model
 import CoreLocation
 @testable import ApiService
 

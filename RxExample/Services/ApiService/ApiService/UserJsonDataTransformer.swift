@@ -1,5 +1,5 @@
 import Foundation
-import Entity
+import Model
 
 private struct UserData: Codable {
     let firstName: String

@@ -1,6 +1,6 @@
 import Foundation
 import DataProvider
-import Entity
+import Model
 import CoreLocation
 import RxSwift
 

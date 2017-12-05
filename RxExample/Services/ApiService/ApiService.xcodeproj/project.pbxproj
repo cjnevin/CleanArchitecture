@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		43166A22DA4D9D29A8F8227E /* Pods_ApiService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE317A24947DB4802B9FA31C /* Pods_ApiService.framework */; };
 		8302FA7E1FD3336500415265 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8302FA7F1FD3336500415265 /* DataProvider.framework */; };
-		8316E5CC1FD3366C00075F12 /* Entity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5CD1FD3366C00075F12 /* Entity.framework */; };
 		8337C2EA1FD60FAA0032B6AC /* UserJsonDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337C2E91FD60FAA0032B6AC /* UserJsonDataTransformer.swift */; };
 		8337C2EC1FD60FBE0032B6AC /* UserJsonDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337C2EB1FD60FBE0032B6AC /* UserJsonDataTransformer.swift */; };
+		8337C2F71FD687520032B6AC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C2F81FD687520032B6AC /* Model.framework */; };
 		839B5CEB1FD3208F000C9E15 /* ApiService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839B5CE11FD3208F000C9E15 /* ApiService.framework */; };
 		839B5CF21FD3208F000C9E15 /* ApiService.h in Headers */ = {isa = PBXBuildFile; fileRef = 839B5CE41FD3208F000C9E15 /* ApiService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83EFF44B1FD320CB002C8AD2 /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF44A1FD320CB002C8AD2 /* UserApiService.swift */; };
@@ -34,13 +34,9 @@
 		3D390E2B522D8F77C1F3CB57 /* Pods_ApiServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607A2D98667C463D93EDC6CA /* Pods-ApiServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiServiceTests.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-ApiServiceTests/Pods-ApiServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8302FA7F1FD3336500415265 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8302FA891FD3345900415265 /* DataTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8316E5CD1FD3366C00075F12 /* Entity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8337C2E91FD60FAA0032B6AC /* UserJsonDataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJsonDataTransformer.swift; sourceTree = "<group>"; };
 		8337C2EB1FD60FBE0032B6AC /* UserJsonDataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJsonDataTransformer.swift; sourceTree = "<group>"; };
-		835F8A471FD3211C0005397C /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		835F8A481FD3211C0005397C /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		835F8A491FD3211C0005397C /* Transformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Transformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8337C2F81FD687520032B6AC /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		839B5CE11FD3208F000C9E15 /* ApiService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApiService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		839B5CE41FD3208F000C9E15 /* ApiService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiService.h; sourceTree = "<group>"; };
 		839B5CE51FD3208F000C9E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8316E5CC1FD3366C00075F12 /* Entity.framework in Frameworks */,
+				8337C2F71FD687520032B6AC /* Model.framework in Frameworks */,
 				8302FA7E1FD3336500415265 /* DataProvider.framework in Frameworks */,
 				43166A22DA4D9D29A8F8227E /* Pods_ApiService.framework in Frameworks */,
 			);
@@ -88,12 +84,8 @@
 		835F8A431FD3211C0005397C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8316E5CD1FD3366C00075F12 /* Entity.framework */,
-				8302FA891FD3345900415265 /* DataTransformer.framework */,
+				8337C2F81FD687520032B6AC /* Model.framework */,
 				8302FA7F1FD3336500415265 /* DataProvider.framework */,
-				835F8A471FD3211C0005397C /* Model.framework */,
-				835F8A481FD3211C0005397C /* Repository.framework */,
-				835F8A491FD3211C0005397C /* Transformer.framework */,
 				EE317A24947DB4802B9FA31C /* Pods_ApiService.framework */,
 				3D390E2B522D8F77C1F3CB57 /* Pods_ApiServiceTests.framework */,
 			);

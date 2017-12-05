@@ -1,5 +1,5 @@
 import XCTest
-import Entity
+import Model
 import RxSwift
 import RxBlocking
 import RxTest
