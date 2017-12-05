@@ -32,6 +32,10 @@ Imports `Model`
 
 Defines Interface of `Service`'s
 
+Defines DTOs
+
+Maps DTOs to and from `Model`.
+
 Provides data to facilitate the use case.
 
 May call multiple services to achieve goal. For example, a `UserListProvider` may check `StorageService` first before calling `ApiService`, if `ApiService` succeeds then a `UserList` is passed back to `StorageService` and the `UserList` is returned.
@@ -43,11 +47,9 @@ Unit tested with mock `Service`.
 ## Service (Framework for each)
 Imports `DataProvider`
 
-Imports `Model`
-
 Defines Interface of `DataTransformer`
 
-Implementation of a **single** service, calls `DataTransformer` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `Model`.
+Implementation of a **single** service, calls `DataTransformer` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `DTO`.
 
 Example(s): `ApiService`, `LocationService`, `StorageService`
 
