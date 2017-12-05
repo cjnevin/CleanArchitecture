@@ -6,10 +6,6 @@ import RxTest
 import Mock
 @testable import DataProvider
 
-private enum LocationError: Swift.Error {
-    case fake
-}
-
 private class UserLocationProviderTests: XCTestCase {
     var provider: UserLocationProvider!
     var service: LocationServiceMock!

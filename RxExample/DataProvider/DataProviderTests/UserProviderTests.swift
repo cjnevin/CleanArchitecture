@@ -6,10 +6,6 @@ import RxTest
 import Mock
 @testable import DataProvider
 
-private enum UserError: Swift.Error {
-    case fake
-}
-
 private class UserProviderTests: XCTestCase {
     var provider: UserProvider!
     var storage: UserStorageServiceMock!
@@ -22,15 +18,15 @@ private class UserProviderTests: XCTestCase {
     }
     
     func testGetUserReturnsValueFromApiWhenStorageThrowsAnError() {
-        storage.getMock.set(.error(UserError.fake))
+        storage.getMock.set(.error(MockError.error))
         XCTAssertEqual(provider.user, api.fetchMock.user)
         storage.getMock.expect(count: .toBeOne)
         api.fetchMock.expect(count: .toBeOne)
     }
     
     func testGetUserReturnsErrorWhenBothStorageAndApiThrowAnError() {
-        storage.getMock.set(.error(UserError.fake))
-        api.fetchMock.set(.error(UserError.fake))
+        storage.getMock.set(.error(MockError.error))
+        api.fetchMock.set(.error(MockError.error))
         XCTAssertNil(provider.user)
         storage.getMock.expect(count: .toBeOne)
         api.fetchMock.expect(count: .toBeOne)
