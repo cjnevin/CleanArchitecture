@@ -6,8 +6,7 @@ import UseCase
 struct GetLocationUseCaseFactory {
     private let provider: DataProvider.UserLocationProvider
 
-    init() {
-        let service = CurrentLocationService()
+    init(service: DataProvider.LocationService = CurrentLocationService()) {
         self.provider = UserLocationProvider(service: service)
     }
 

@@ -7,9 +7,8 @@ import UseCase
 struct GetUserUseCaseFactory {
     private let provider: DataProvider.UserProvider
 
-    init() {
-        let storage = UserStorageService()
-        let api = UserApiService()
+    init(storage: DataProvider.UserStorageService = UserStorageService(),
+         api: DataProvider.UserApiService = UserApiService()) {
         self.provider = UserProvider(storage: storage, api: api)
     }
 
