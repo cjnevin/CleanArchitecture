@@ -11,8 +11,9 @@
 		8316E5DC1FD3396600075F12 /* UseCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5DD1FD3396600075F12 /* UseCase.framework */; };
 		8337C2F91FD687600032B6AC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C2FA1FD687600032B6AC /* Model.framework */; };
 		83714E541FD2ACFD0081B39E /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83714E4A1FD2ACFD0081B39E /* Presentation.framework */; };
-		83714E591FD2ACFD0081B39E /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83714E581FD2ACFD0081B39E /* PresentationTests.swift */; };
+		83714E591FD2ACFD0081B39E /* UserLocationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83714E581FD2ACFD0081B39E /* UserLocationViewModelTests.swift */; };
 		83714E5B1FD2ACFD0081B39E /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 83714E4D1FD2ACFD0081B39E /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8373F6F41FD79F1B00BB9EF8 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373F6F31FD79F1B00BB9EF8 /* UserViewModelTests.swift */; };
 		83A58A591FD487A200A38BB5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A58A581FD487A200A38BB5 /* UserViewModel.swift */; };
 		83B93EFE1FD2ED18001CA8A2 /* UserLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93EFD1FD2ED18001CA8A2 /* UserLocationViewModel.swift */; };
 		8EC09CA0B8DC8D04F6C5D441 /* Pods_Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF97BEA4B0A250B1E04EEEA /* Pods_Presentation.framework */; };
@@ -37,8 +38,9 @@
 		83714E4D1FD2ACFD0081B39E /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		83714E4E1FD2ACFD0081B39E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83714E531FD2ACFD0081B39E /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		83714E581FD2ACFD0081B39E /* PresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationTests.swift; sourceTree = "<group>"; };
+		83714E581FD2ACFD0081B39E /* UserLocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationViewModelTests.swift; sourceTree = "<group>"; };
 		83714E5A1FD2ACFD0081B39E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8373F6F31FD79F1B00BB9EF8 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		83A58A581FD487A200A38BB5 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		83B93EFD1FD2ED18001CA8A2 /* UserLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationViewModel.swift; sourceTree = "<group>"; };
 		A2DB0015F367397AF82A8798 /* Pods-PresentationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PresentationTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PresentationTests/Pods-PresentationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +117,8 @@
 		83714E571FD2ACFD0081B39E /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				83714E581FD2ACFD0081B39E /* PresentationTests.swift */,
+				83714E581FD2ACFD0081B39E /* UserLocationViewModelTests.swift */,
+				8373F6F31FD79F1B00BB9EF8 /* UserViewModelTests.swift */,
 				83714E5A1FD2ACFD0081B39E /* Info.plist */,
 			);
 			path = PresentationTests;
@@ -302,12 +305,16 @@
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -348,7 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83714E591FD2ACFD0081B39E /* PresentationTests.swift in Sources */,
+				83714E591FD2ACFD0081B39E /* UserLocationViewModelTests.swift in Sources */,
+				8373F6F41FD79F1B00BB9EF8 /* UserViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,6 +53,7 @@ target 'Presentation' do
     rxcocoa
     rxswift
     action
+    rxtest
   end
 end
 

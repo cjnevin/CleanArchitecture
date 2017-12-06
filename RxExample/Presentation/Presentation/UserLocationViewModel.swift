@@ -5,7 +5,7 @@ import RxCocoa
 import RxSwift
 
 public class UserLocationViewModel: ReactiveCompatible {
-    internal let useCase: GetUserLocationUseCase
+    fileprivate let useCase: GetUserLocationUseCase
 
     public init(useCase: GetUserLocationUseCase) {
         self.useCase = useCase

@@ -10,12 +10,12 @@ public protocol UserNavigator {
 }
 
 public class UserViewModel: ReactiveCompatible {
-    internal let useCase: GetUserUseCase
+    fileprivate let user: Driver<User>
     public let showMap: Action<Void, Void>
 
     public init(useCase: GetUserUseCase,
                 navigator: UserNavigator) {
-        self.useCase = useCase
+        self.user = useCase.getUser().asDriver(onErrorDriveWith: .empty())
         self.showMap = Action<Void, Void> { _ in
             .just(navigator.navigateToMap())
         }
@@ -23,18 +23,14 @@ public class UserViewModel: ReactiveCompatible {
 }
 
 public extension Reactive where Base: UserViewModel {
-    internal func user() -> Driver<User> {
-        return base.useCase.getUser().asDriver(onErrorDriveWith: .empty())
-    }
-
     public var firstName: Driver<String> {
-        return user().map {
+        return base.user.map {
             $0.firstName
         }
     }
 
     public var lastName: Driver<String> {
-        return user().map {
+        return base.user.map {
             $0.lastName
         }
     }
