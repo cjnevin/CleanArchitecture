@@ -32,11 +32,13 @@ Imports `Model`
 
 Defines Interface of `Service`'s
 
-Defines DTOs
+Defines `DTO`'s
 
-Maps DTOs to and from `Model`.
+Provides data to facilitate the use case. Maps `DTO` to and from `Model`.
 
-Provides data to facilitate the use case.
+Input and output of `DataProvider` methods is a `Model` object.
+
+Input and output of `Service` interfaces is a `DTO` object.
 
 May call multiple services to achieve goal. For example, a `UserListProvider` may check `StorageService` first before calling `ApiService`, if `ApiService` succeeds then a `UserList` is passed back to `StorageService` and the `UserList` is returned.
 
@@ -47,18 +49,22 @@ Unit tested with mock `Service`.
 ## Service (Framework for each)
 Imports `DataProvider`
 
-Defines Interface of `DataTransformer`
+Defines Interface of `Mapper`
 
-Implementation of a **single** service, calls `DataTransformer` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `DTO`.
+Input and output of `Service` is a `DTO` object.
+
+Implementation of a **single** service, calls `Mapper` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `DTO`.
 
 Example(s): `ApiService`, `LocationService`, `StorageService`
 
-Unit tested with mock `DataTransformer`.
+Unit tested.
 
-### DataTransformer (Part of each Service)
-Imports `Model`
+### Mapper (Part of each Service)
+Imports `DataProvider`
 
-Transforms data from `Service` data type to `Model` data type.
+Transforms data from `Service` data type to `DTO`.
+
+There are many different ways of implementing this layer such as using a class that transforms between the objects or an extension on the object type that converts to another object type.
 
 Examples(s): `UserJsonTransformer`, `UserRealmTransformer`, `LocationCLLocationTransformer`
 
