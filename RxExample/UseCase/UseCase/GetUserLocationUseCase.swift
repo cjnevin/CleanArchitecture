@@ -1,5 +1,5 @@
 import Foundation
-import Entity
+import Model
 import RxSwift
 
 public protocol UserLocationProvider {

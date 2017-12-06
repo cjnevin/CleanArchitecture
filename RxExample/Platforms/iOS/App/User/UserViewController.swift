@@ -1,5 +1,4 @@
 import UIKit
-import Entity
 import Presentation
 import RxSwift
 import RxCocoa
@@ -11,16 +10,16 @@ class UserViewController: UIViewController {
     private lazy var lastNameTitleLabel: UILabel = makeLastNameTitleLabel()
     private lazy var lastNameValueLabel: UILabel = makeLastNameValueLabel()
     private lazy var nameStackView: UIStackView = makeNameStackView()
-    private lazy var disposeBag = DisposeBag()
+    private lazy var singleDisposable = SingleAssignmentDisposable()
 
     var viewModel: UserViewModel? {
         didSet {
-            disposeBag = DisposeBag()
+            singleDisposable.dispose()
 
             guard let viewModel = viewModel else {
                 return
             }
-            bind(viewModel: viewModel).disposed(by: disposeBag)
+            singleDisposable.setDisposable(bind(viewModel: viewModel))
         }
     }
 

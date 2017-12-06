@@ -1,16 +1,10 @@
 import Foundation
 import DataProvider
-import Entity
-import DataTransformer
 import RxSwift
 
 public struct UserApiService: DataProvider.UserApiService {
-    private let transformer: UserJsonDataTransformer
-
-    public init(transformer: UserJsonDataTransformer) {
-        self.transformer = transformer
-    }
-
+    public init() { }
+    
     private func fakeData() -> Data {
         // Fake Api call yielding a response ...
         let response = ["firstName": "fakeFirstName",
@@ -19,9 +13,9 @@ public struct UserApiService: DataProvider.UserApiService {
         return data
     }
 
-    public func fetchUser() -> Single<User> {
+    public func fetchUser() -> Single<UserDto> {
         let data = fakeData()
-        let user = transformer.transform(data)
+        let user = data.asDto()
         return .just(user)
     }
 }

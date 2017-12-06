@@ -68,17 +68,6 @@ target 'DataProvider' do
   end
 end
 
-target 'DataTransformer' do
-  project 'DataTransformer/DataTransformer.xcodeproj'
-  use_frameworks!
-  # rxswift
-
-  target 'DataTransformerTests' do
-    inherit! :search_paths
-    # rxswift
-  end
-end
-
 target 'UseCase' do
   project 'UseCase/UseCase.xcodeproj'
   use_frameworks!

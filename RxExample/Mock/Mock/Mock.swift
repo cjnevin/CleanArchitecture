@@ -1,6 +1,10 @@
 import Foundation
 import XCTest
 
+public enum MockError: Error {
+    case error
+}
+
 public class Mock<T> {
     public enum Count {
         case toBeZero

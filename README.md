@@ -5,11 +5,9 @@ My take on Uncle Bob's clean architecture in Swift.
 - **Example** (no asynchronous events, everything returns immediately)
 - **RxExample** (asynchronous, RxSwift, RxCocoa, Action)
 
-The workspaces are comprised of 5 main frameworks with each service having an additional framework and each platform having an additional app.
+The workspaces are comprised of 4 main frameworks with each service having an additional framework and each platform having an additional app.
 
-**Note:** These are just concepts and there is the possibility of combining some of these concepts into singular frameworks such as combining `Service` and `DataTransformer`. Or treating `DataProvider` and `Service` as the same thing.
-
-## Entity (Framework)
+## Model (Framework)
 Defines common object structure.
 
 Examples: `Location`, `User`, `UserList`
@@ -17,7 +15,7 @@ Examples: `Location`, `User`, `UserList`
 Unit tests not needed unless files provide helper methods.
 
 ## UseCase (Framework)
-Imports `Entity`
+Imports `Model`
 
 Defines Interface of `DataProvider`'s
 
@@ -30,11 +28,17 @@ Unit tested with mock `DataProvider`.
 ## DataProvider (Framework)
 Imports `UseCase`
 
-Imports `Entity`
+Imports `Model`
 
 Defines Interface of `Service`'s
 
-Provides data to facilitate the use case.
+Defines `DTO`'s
+
+Provides data to facilitate the use case. Maps `DTO` to and from `Model`.
+
+Input and output of `DataProvider` methods is a `Model` object.
+
+Input and output of `Service` interfaces is a `DTO` object.
 
 May call multiple services to achieve goal. For example, a `UserListProvider` may check `StorageService` first before calling `ApiService`, if `ApiService` succeeds then a `UserList` is passed back to `StorageService` and the `UserList` is returned.
 
@@ -42,32 +46,32 @@ Example(s): `UserListProvider`, `LocationProvider`
 
 Unit tested with mock `Service`.
 
-## DataTransformer (Framework)
-Imports `...Service`
+## Service (Framework for each)
+Imports `DataProvider`
 
-Imports `Entity`
+Defines Interface of `Mapper`
 
-Transforms or maps data from one structure to another.
+Input and output of `Service` is a `DTO` object.
+
+Implementation of a **single** service, calls `Mapper` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `DTO`.
+
+Example(s): `ApiService`, `LocationService`, `StorageService`
+
+Unit tested.
+
+### Mapper (Part of each Service)
+Imports `DataProvider`
+
+Transforms data from `Service` data type to `DTO`.
+
+There are many different ways of implementing this layer such as using a class that transforms between the objects or an extension on the object type that converts to another object type.
 
 Examples(s): `UserJsonTransformer`, `UserRealmTransformer`, `LocationCLLocationTransformer`
 
 Unit tested.
 
-## Service (Framework for each)
-Imports `DataProvider`
-
-Imports `Entity`
-
-Defines Interface of `DataTransformer`
-
-Implementation of a **single** service, calls `DataTransformer` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `Entity`.
-
-Example(s): `ApiService`, `LocationService`, `StorageService`
-
-Unit tested with mock `DataTransformer`.
-
 ## Presentation (Framework)
-Imports `Entity`
+Imports `Model`
 
 Imports `UseCase`
 
@@ -77,7 +81,7 @@ Defines Interface of `View`
 
 Defines Interface of `Navigator`
 
-Shows `Entity` data from `UseCase` on `View`.
+Shows `Model` data from `UseCase` on `View`.
 
 Navigates between `Presenter`'s using `Navigator`.
 
@@ -89,7 +93,7 @@ Unit tested with mock `View` and `Navigator`.
 
 Defines Interface of `Navigator`
 
-Exposes `Entity` data from `UseCase` to `ViewModel`. `View` is responsible for `Rx` binding.
+Exposes `Model` data from `UseCase` to `ViewModel`. `View` is responsible for `Rx` binding.
 
 Exposes `Action` to navigate using `Navigator`.
 
@@ -100,7 +104,7 @@ Unit tested with `RxTest` framework and mock `Navigator`.
 ## Platform (App for each)
 Imports `Presentation`
 
-Imports `Entity`
+Imports `Model`
 
 Implementation of `View` interfaces defined in `Presenter`.
 
@@ -116,8 +120,6 @@ Unit testing optional.
 
 ### UseCaseFactory/Provider (Part of Platform)
 
-Injects `DataTransformer` into `...Service`.
-
 Injects `...Service` into `DataProvider`.
 
 Injects `DataProvider` into `UseCase`.
@@ -129,8 +131,6 @@ Provides use cases to `Presenter`.
 Unit testing not necessary, no business logic exists in this framework.
 
 ### ViewFactory/Configurator (Part of Platform, one for each `View`)
-
-Imports `DataTransformer`
 
 Imports `UseCaseFactory`
 

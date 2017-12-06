@@ -28,13 +28,10 @@
       location = "group:DataProvider/DataProvider.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DataTransformer/DataTransformer.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:UseCase/UseCase.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Entity/Entity.xcodeproj">
+      location = "group:/Users/chris/projects/me/_CleanArchitecture/RxExample/Entity/Model.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Mock/Mock.xcodeproj">

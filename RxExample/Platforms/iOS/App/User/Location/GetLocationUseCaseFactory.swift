@@ -1,5 +1,4 @@
 import Foundation
-import DataTransformer
 import LocationService
 import DataProvider
 import UseCase
@@ -7,9 +6,7 @@ import UseCase
 struct GetLocationUseCaseFactory {
     private let provider: DataProvider.UserLocationProvider
 
-    init() {
-        let transformer = LocationCLLocationTransformer()
-        let service = CurrentLocationService(transformer: transformer)
+    init(service: DataProvider.LocationService = CurrentLocationService()) {
         self.provider = UserLocationProvider(service: service)
     }
 
