@@ -51,6 +51,8 @@ Imports `DataProvider`
 
 Defines Interface of `Mapper`
 
+Input and output of `Service` is a `DTO` object.
+
 Implementation of a **single** service, calls `Mapper` to mutate between data type (i.e. `Realm`, `CLLocation`, `SQL`) and `DTO`.
 
 Example(s): `ApiService`, `LocationService`, `StorageService`
