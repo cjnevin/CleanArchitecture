@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		49007D1A5281276439897DAC /* Pods_LocationServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4831B6D805D50740B07269 /* Pods_LocationServiceTests.framework */; };
 		8302FA801FD3336A00415265 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8302FA811FD3336A00415265 /* DataProvider.framework */; };
-		8337C2EE1FD60FF40032B6AC /* LocationCLLocationTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337C2ED1FD60FF40032B6AC /* LocationCLLocationTransformer.swift */; };
 		8337C2F01FD60FFB0032B6AC /* LocationCLLocationTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337C2EF1FD60FFB0032B6AC /* LocationCLLocationTransformerTests.swift */; };
-		8337C2F51FD6874D0032B6AC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C2F61FD6874D0032B6AC /* Model.framework */; };
+		8373F6DE1FD7844600BB9EF8 /* LocationMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373F6DD1FD7844600BB9EF8 /* LocationMapping.swift */; };
 		8376E2DF1FD31F9500DC7399 /* LocationService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8376E2D51FD31F9500DC7399 /* LocationService.framework */; };
 		8376E2E41FD31F9500DC7399 /* LocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8376E2E31FD31F9500DC7399 /* LocationServiceTests.swift */; };
 		8376E2E61FD31F9600DC7399 /* LocationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 8376E2D81FD31F9500DC7399 /* LocationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,9 +33,9 @@
 		3047E23EA822ADD6E4DF3C6B /* Pods-LocationServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationServiceTests.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-LocationServiceTests/Pods-LocationServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		526C6E1602A4F9B43FC79515 /* Pods-LocationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationService.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-LocationService/Pods-LocationService.release.xcconfig"; sourceTree = "<group>"; };
 		8302FA811FD3336A00415265 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8337C2ED1FD60FF40032B6AC /* LocationCLLocationTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCLLocationTransformer.swift; sourceTree = "<group>"; };
 		8337C2EF1FD60FFB0032B6AC /* LocationCLLocationTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCLLocationTransformerTests.swift; sourceTree = "<group>"; };
 		8337C2F61FD6874D0032B6AC /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8373F6DD1FD7844600BB9EF8 /* LocationMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapping.swift; sourceTree = "<group>"; };
 		8376E2D51FD31F9500DC7399 /* LocationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LocationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8376E2D81FD31F9500DC7399 /* LocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		8376E2D91FD31F9500DC7399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8337C2F51FD6874D0032B6AC /* Model.framework in Frameworks */,
 				8302FA801FD3336A00415265 /* DataProvider.framework in Frameworks */,
 				D0A28CE2F53AAA5DC5979DDC /* Pods_LocationService.framework in Frameworks */,
 			);
@@ -97,7 +95,7 @@
 			children = (
 				8376E2D81FD31F9500DC7399 /* LocationService.h */,
 				8376E2EF1FD31FC000DC7399 /* CurrentLocationService.swift */,
-				8337C2ED1FD60FF40032B6AC /* LocationCLLocationTransformer.swift */,
+				8373F6DD1FD7844600BB9EF8 /* LocationMapping.swift */,
 				8376E2D91FD31F9500DC7399 /* Info.plist */,
 			);
 			path = LocationService;
@@ -337,8 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8337C2EE1FD60FF40032B6AC /* LocationCLLocationTransformer.swift in Sources */,
 				8376E2F01FD31FC000DC7399 /* CurrentLocationService.swift in Sources */,
+				8373F6DE1FD7844600BB9EF8 /* LocationMapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

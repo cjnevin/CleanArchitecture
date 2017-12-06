@@ -1,35 +1,23 @@
 import XCTest
-import Model
 import CoreLocation
-@testable import DataTransformer
+import DataProvider
+@testable import LocationService
 
-class LocationCLLocationTransformerTests: XCTestCase {
-    var transformer: LocationCLLocationTransformer!
-    
+class LocationMappingTests: XCTestCase {
     func testTransformFromCLLocationToLocation() {
         let clLocation = CLLocation(latitude: 1, longitude: 2)
-        let location = transformer.transform(clLocation)
+        let location = clLocation.asDto()
         XCTAssertEqual(clLocation, location)
     }
     
     func testTransformFromLocationToCLLocation() {
-        let location = Location(latitude: 1, longitude: 2)
-        let clLocation = transformer.transform(location)
+        let location = LocationDto(latitude: 1, longitude: 2)
+        let clLocation = location.asCLLocation()
         XCTAssertEqual(clLocation, location)
-    }
-    
-    override func setUp() {
-        super.setUp()
-        transformer = LocationCLLocationTransformer()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-        transformer = nil
     }
 }
 
-private func XCTAssertEqual(_ clLocation: CLLocation, _ location: Location, file: StaticString = #file, line: UInt = #line) {
+private func XCTAssertEqual(_ clLocation: CLLocation, _ location: LocationDto, file: StaticString = #file, line: UInt = #line) {
     XCTAssertEqual(clLocation.coordinate.latitude, location.latitude, file: file, line: line)
     XCTAssertEqual(clLocation.coordinate.longitude, location.longitude, file: file, line: line)
 }

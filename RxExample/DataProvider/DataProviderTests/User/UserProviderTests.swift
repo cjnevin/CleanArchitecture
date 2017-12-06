@@ -56,8 +56,8 @@ private extension UserProvider {
     }
 }
 
-private extension Mock where T == Single<User> {
-    var user: User? {
+private extension Mock where T == Single<UserDto> {
+    var user: UserDto? {
         guard let user = try? value.toBlocking().single() else {
             return nil
         }
@@ -66,19 +66,19 @@ private extension Mock where T == Single<User> {
 }
 
 private class UserStorageServiceMock: UserStorageService {
-    let getMock = Mock(Single<User>.just(User(firstName: "Stored", lastName: "User")))
-    func getUser() -> Single<User> { return getMock.execute() }
+    let getMock = Mock(Single<UserDto>.just(UserDto(firstName: "Stored", lastName: "User")))
+    func getUser() -> Single<UserDto> { return getMock.execute() }
     
     let setMock = Mock(Completable.empty())
-    func setUser(_ user: User) -> Completable { return setMock.execute() }
+    func setUser(_ user: UserDto) -> Completable { return setMock.execute() }
 }
 
 private class UserApiServiceMock: UserApiService {
-    let fetchMock = Mock(Single<User>.just(User(firstName: "Api", lastName: "User")))
-    func fetchUser() -> Single<User> { return fetchMock.execute() }
+    let fetchMock = Mock(Single<UserDto>.just(UserDto(firstName: "Api", lastName: "User")))
+    func fetchUser() -> Single<UserDto> { return fetchMock.execute() }
 }
 
-private func XCTAssertEqual(_ a: User?, _ b: User?, file: StaticString = #file, line: UInt = #line) {
+private func XCTAssertEqual(_ a: User?, _ b: UserDto?, file: StaticString = #file, line: UInt = #line) {
     guard let a = a else {
         XCTFail("Actual user was not returned", file: file, line: line)
         return

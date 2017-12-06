@@ -1,16 +1,13 @@
 import Foundation
 import DataProvider
-import Model
 import CoreLocation
 import RxSwift
 
 public class CurrentLocationService: DataProvider.LocationService {
-    private let transformer: LocationCLLocationTransformer
     private let locationManager: CLLocationManager
     private let locationManagerDelegate: LocationManagerDelegate
 
     public init() {
-        self.transformer = LocationCLLocationTransformer()
         self.locationManager = CLLocationManager()
         self.locationManagerDelegate = LocationManagerDelegate()
         self.locationManager.delegate = self.locationManagerDelegate
@@ -18,11 +15,11 @@ public class CurrentLocationService: DataProvider.LocationService {
         self.locationManager.requestLocation()
     }
 
-    public func getCurrentLocation() -> Observable<Location> {
+    public func getCurrentLocation() -> Observable<LocationDto> {
         return locationManagerDelegate
                 .latestLocation
                 .asObservable()
-                .map(transformer.transform)
+                .map { $0.asDto() }
     }
 }
 

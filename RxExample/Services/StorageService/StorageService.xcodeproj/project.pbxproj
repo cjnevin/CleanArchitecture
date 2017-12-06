@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4ECC0ABB1DDA4F58CBE645E6 /* Pods_StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB73388AE213543B74AB06A /* Pods_StorageService.framework */; };
 		8302FA821FD3336E00415265 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8302FA831FD3336E00415265 /* DataProvider.framework */; };
-		8337C2F31FD687470032B6AC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C2F41FD687470032B6AC /* Model.framework */; };
 		835F8A3B1FD321070005397C /* UserStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835F8A3A1FD321070005397C /* UserStorageService.swift */; };
 		83EFF4601FD320E3002C8AD2 /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EFF4561FD320E3002C8AD2 /* StorageService.framework */; };
 		83EFF4651FD320E3002C8AD2 /* StorageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF4641FD320E3002C8AD2 /* StorageServiceTests.swift */; };
@@ -50,7 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8337C2F31FD687470032B6AC /* Model.framework in Frameworks */,
 				8302FA821FD3336E00415265 /* DataProvider.framework in Frameworks */,
 				4ECC0ABB1DDA4F58CBE645E6 /* Pods_StorageService.framework in Frameworks */,
 			);

@@ -12,6 +12,10 @@
 		8337C3031FD687DC0032B6AC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C3041FD687DC0032B6AC /* Model.framework */; };
 		835E10B11FD2AC56006CCE83 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835E10A71FD2AC56006CCE83 /* DataProvider.framework */; };
 		835E10B81FD2AC56006CCE83 /* DataProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E10AA1FD2AC56006CCE83 /* DataProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8373F6E01FD784DF00BB9EF8 /* UserMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373F6DF1FD784DF00BB9EF8 /* UserMapping.swift */; };
+		8373F6E21FD7850C00BB9EF8 /* LocationMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373F6E11FD7850C00BB9EF8 /* LocationMapping.swift */; };
+		8373F6E61FD7855800BB9EF8 /* UserMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373F6E51FD7855800BB9EF8 /* UserMappingTests.swift */; };
+		8373F6EA1FD7865200BB9EF8 /* LocationMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373F6E91FD7865200BB9EF8 /* LocationMappingTests.swift */; };
 		839C06751FD4B62400E23058 /* UserProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C06741FD4B62400E23058 /* UserProviderTests.swift */; };
 		839C06771FD4BCD600E23058 /* Mock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C06781FD4BCD600E23058 /* Mock.framework */; };
 		83B93F041FD2FB77001CA8A2 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93F031FD2FB77001CA8A2 /* UserProvider.swift */; };
@@ -40,6 +44,10 @@
 		835E10AB1FD2AC56006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835E10B01FD2AC56006CCE83 /* DataProviderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataProviderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		835E10B71FD2AC56006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8373F6DF1FD784DF00BB9EF8 /* UserMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapping.swift; sourceTree = "<group>"; };
+		8373F6E11FD7850C00BB9EF8 /* LocationMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapping.swift; sourceTree = "<group>"; };
+		8373F6E51FD7855800BB9EF8 /* UserMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMappingTests.swift; sourceTree = "<group>"; };
+		8373F6E91FD7865200BB9EF8 /* LocationMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMappingTests.swift; sourceTree = "<group>"; };
 		839C06741FD4B62400E23058 /* UserProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProviderTests.swift; sourceTree = "<group>"; };
 		839C06781FD4BCD600E23058 /* Mock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Mock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B93F031FD2FB77001CA8A2 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
@@ -110,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				835E10AA1FD2AC56006CCE83 /* DataProvider.h */,
-				83B93F031FD2FB77001CA8A2 /* UserProvider.swift */,
-				83B93F351FD319C1001CA8A2 /* UserLocationProvider.swift */,
+				8373F6E31FD7853200BB9EF8 /* User */,
+				8373F6E41FD7853C00BB9EF8 /* Location */,
 				835E10AB1FD2AC56006CCE83 /* Info.plist */,
 			);
 			path = DataProvider;
@@ -120,11 +128,47 @@
 		835E10B41FD2AC56006CCE83 /* DataProviderTests */ = {
 			isa = PBXGroup;
 			children = (
-				839C06741FD4B62400E23058 /* UserProviderTests.swift */,
-				83DE5E6D1FD4C389005CEC21 /* UserLocationProviderTests.swift */,
+				8373F6E71FD7864300BB9EF8 /* User */,
+				8373F6E81FD7864800BB9EF8 /* Location */,
 				835E10B71FD2AC56006CCE83 /* Info.plist */,
 			);
 			path = DataProviderTests;
+			sourceTree = "<group>";
+		};
+		8373F6E31FD7853200BB9EF8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				83B93F031FD2FB77001CA8A2 /* UserProvider.swift */,
+				8373F6DF1FD784DF00BB9EF8 /* UserMapping.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		8373F6E41FD7853C00BB9EF8 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				83B93F351FD319C1001CA8A2 /* UserLocationProvider.swift */,
+				8373F6E11FD7850C00BB9EF8 /* LocationMapping.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		8373F6E71FD7864300BB9EF8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				839C06741FD4B62400E23058 /* UserProviderTests.swift */,
+				8373F6E51FD7855800BB9EF8 /* UserMappingTests.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		8373F6E81FD7864800BB9EF8 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				83DE5E6D1FD4C389005CEC21 /* UserLocationProviderTests.swift */,
+				8373F6E91FD7865200BB9EF8 /* LocationMappingTests.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		83B93ED01FD2AD4C001CA8A2 /* Frameworks */ = {
@@ -347,7 +391,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B93F041FD2FB77001CA8A2 /* UserProvider.swift in Sources */,
+				8373F6E21FD7850C00BB9EF8 /* LocationMapping.swift in Sources */,
 				83B93F361FD319C1001CA8A2 /* UserLocationProvider.swift in Sources */,
+				8373F6E01FD784DF00BB9EF8 /* UserMapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DE5E6E1FD4C389005CEC21 /* UserLocationProviderTests.swift in Sources */,
+				8373F6EA1FD7865200BB9EF8 /* LocationMappingTests.swift in Sources */,
 				839C06751FD4B62400E23058 /* UserProviderTests.swift in Sources */,
+				8373F6E61FD7855800BB9EF8 /* UserMappingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

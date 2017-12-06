@@ -1,6 +1,5 @@
 import Foundation
 import DataProvider
-import Model
 import RxSwift
 
 public struct UserStorageService: DataProvider.UserStorageService {
@@ -14,12 +13,12 @@ public struct UserStorageService: DataProvider.UserStorageService {
 
     }
 
-    public func getUser() -> Single<User> {
+    public func getUser() -> Single<UserDto> {
         // TODO: Get from Storage
         return .error(Error.notFound)
     }
 
-    public func setUser(_ user: User) -> Completable {
+    public func setUser(_ user: UserDto) -> Completable {
         // TODO: Store
         return .empty()
     }

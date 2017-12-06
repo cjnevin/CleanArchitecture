@@ -14,9 +14,9 @@ private class UserLocationProviderTests: XCTestCase {
     
     func testProviderReturnsValues() {
         let values = scheduler.createHotObservable([
-            next(10, Location(latitude: 1, longitude: 2)),
-            next(20, Location(latitude: 3, longitude: 4)),
-            next(30, Location(latitude: 5, longitude: 6)),
+            next(10, LocationDto(latitude: 1, longitude: 2)),
+            next(20, LocationDto(latitude: 3, longitude: 4)),
+            next(30, LocationDto(latitude: 5, longitude: 6)),
             ])
         service.getMock.set(values.asObservable())
         
@@ -57,6 +57,6 @@ private class UserLocationProviderTests: XCTestCase {
 }
 
 private class LocationServiceMock: LocationService {
-    let getMock = Mock(Observable<Location>.just(Location(latitude: 1, longitude: 2)))
-    func getCurrentLocation() -> Observable<Location> { return getMock.execute() }
+    let getMock = Mock(Observable<LocationDto>.just(LocationDto(latitude: 1, longitude: 2)))
+    func getCurrentLocation() -> Observable<LocationDto> { return getMock.execute() }
 }

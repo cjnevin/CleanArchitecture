@@ -4,12 +4,12 @@ import Model
 import RxSwift
 
 public protocol UserStorageService {
-    func getUser() -> Single<User>
-    func setUser(_ user: User) -> Completable
+    func getUser() -> Single<UserDto>
+    func setUser(_ user: UserDto) -> Completable
 }
 
 public protocol UserApiService {
-    func fetchUser() -> Single<User>
+    func fetchUser() -> Single<UserDto>
 }
 
 public struct UserProvider: UseCase.UserProvider {
@@ -31,5 +31,6 @@ public struct UserProvider: UseCase.UserProvider {
                                         .andThen(.just(user))
                             }
                 }
+                .map { $0.asModel() }
     }
 }

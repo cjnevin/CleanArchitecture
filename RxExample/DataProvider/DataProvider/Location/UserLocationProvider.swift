@@ -4,7 +4,7 @@ import Model
 import RxSwift
 
 public protocol LocationService {
-    func getCurrentLocation() -> Observable<Location>
+    func getCurrentLocation() -> Observable<LocationDto>
 }
 
 public struct UserLocationProvider: UseCase.UserLocationProvider {
@@ -16,5 +16,6 @@ public struct UserLocationProvider: UseCase.UserLocationProvider {
 
     public func getLocation() -> Observable<Location> {
         return service.getCurrentLocation()
+            .map { $0.asModel() }
     }
 }
