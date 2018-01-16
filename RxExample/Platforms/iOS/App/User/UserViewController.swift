@@ -30,10 +30,12 @@ class UserViewController: UIViewController {
 
         return CompositeDisposable(disposables: [
             viewModel.rx.firstName
-                    .drive(firstNameValueLabel.rx.text),
+                .map(Style.attributedValue)
+                .drive(firstNameValueLabel.rx.attributedText),
             viewModel.rx.lastName
-                    .drive(lastNameValueLabel.rx.text)
-        ])
+                .map(Style.attributedValue)
+                .drive(lastNameValueLabel.rx.attributedText)
+            ])
     }
 
     override func viewDidLoad() {
@@ -41,33 +43,12 @@ class UserViewController: UIViewController {
         layout()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     private func layout() {
-        navigationItem.title = "User Details"
-        view.backgroundColor = .white
+        navigationItem.title = String.localize(Identifier.screenTitle)
+        view.backgroundColor = Style.backgroundColor
         
         layoutNameStackView()
         layoutShowMapButton()
-    }
-}
-
-private extension UILabel {
-    static func makeTitleLabel(with text: String? = nil) -> UILabel {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor = .black
-        label.text = text
-        return label
-    }
-
-    static func makeValueLabel() -> UILabel {
-        let label = UILabel()
-        label.textColor = .blue
-        return label
     }
 }
 
@@ -94,27 +75,42 @@ private extension UserViewController {
     }
     
     private func makeShowMapButton() -> UIButton {
+        let id = Identifier.showMap
         let button = UIButton(type: .custom)
-        button.backgroundColor = UIColor.blue.withAlphaComponent(0.05)
-        button.setTitle("Show Map", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
+        button.backgroundColor = Style.buttonBackgroundColor
+        let localizedText = String.localize(id)
+        button.setAttributedTitle(Style.attributedButtonTitle(for: localizedText), for: .normal)
+        button.setAccessibility(identifier: id, value: localizedText)
         return button
     }
 
+    private func makeLabel(with id: Identifier) -> UILabel {
+        let label = UILabel()
+        let localizedText = String.localize(id)
+        let hasLocalizedText = localizedText != id.rawValue
+        if hasLocalizedText {
+            label.attributedText = Style.attributedTitle(for: localizedText)
+            label.setAccessibility(identifier: id, value: localizedText)
+        } else {
+            label.setAccessibility(identifier: id)
+        }
+        return label
+    }
+    
     private func makeFirstNameTitleLabel() -> UILabel {
-        return .makeTitleLabel(with: "First Name:")
+        return makeLabel(with: Identifier.firstNameTitle)
     }
 
     private func makeLastNameTitleLabel() -> UILabel {
-        return .makeTitleLabel(with: "Last Name:")
+        return makeLabel(with: Identifier.lastNameTitle)
     }
 
     private func makeFirstNameValueLabel() -> UILabel {
-        return .makeValueLabel()
+        return makeLabel(with: Identifier.firstNameValue)
     }
 
     private func makeLastNameValueLabel() -> UILabel {
-        return .makeValueLabel()
+        return makeLabel(with: Identifier.lastNameValue)
     }
 
     private func makeFirstNameStackView() -> UIStackView {
@@ -127,5 +123,44 @@ private extension UserViewController {
 
     private func makeNameStackView() -> UIStackView {
         return .makeVerticalStackView(subviews: makeFirstNameStackView(), makeLastNameStackView())
+    }
+}
+
+private enum Identifier: String {
+    case firstNameTitle = "user.first.name.title"
+    case lastNameTitle = "user.last.name.title"
+    case firstNameValue = "user.first.name.value"
+    case lastNameValue = "user.last.name.value"
+    case screenTitle = "user.screen.title"
+    case showMap = "user.show.map"
+}
+
+private enum Style {
+    static var backgroundColor: UIColor {
+        return UIColor.white
+    }
+    
+    static var buttonBackgroundColor: UIColor {
+        return UIColor.blue.withAlphaComponent(0.05)
+    }
+    
+    static func attributedButtonTitle(`for` string: String) -> NSAttributedString {
+        return NSAttributedString(string: string, attributes: [
+            .foregroundColor: UIColor.blue,
+            .font: UIFont.boldSystemFont(ofSize: 20)
+        ])
+    }
+    
+    static func attributedTitle(`for` string: String) -> NSAttributedString {
+        return NSAttributedString(string: string, attributes: [
+            .foregroundColor: UIColor.black,
+            .font: UIFont.boldSystemFont(ofSize: 14)
+        ])
+    }
+    
+    static func attributedValue(`for` string: String) -> NSAttributedString {
+        return NSAttributedString(string: string, attributes: [
+            .foregroundColor: UIColor.blue
+        ])
     }
 }

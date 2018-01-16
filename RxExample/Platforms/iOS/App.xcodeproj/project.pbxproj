@@ -17,6 +17,9 @@
 		8316E5D91FD338F100075F12 /* UseCase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8316E5D71FD338D600075F12 /* UseCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8316E6161FD33D8900075F12 /* GetLocationUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8316E6141FD33D8900075F12 /* GetLocationUseCaseFactory.swift */; };
 		8316E6181FD33D9A00075F12 /* GetUserUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8316E6171FD33D9A00075F12 /* GetUserUseCaseFactory.swift */; };
+		831EA9A9200DAD890026D607 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831EA9AB200DAD890026D607 /* Localizable.strings */; };
+		831EA9AD200DB2940026D607 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EA9AC200DB2940026D607 /* UIView+Extensions.swift */; };
+		831EA9B0200DB2B70026D607 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EA9AF200DB2B70026D607 /* String+Extensions.swift */; };
 		8337C3011FD687910032B6AC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C3001FD687890032B6AC /* Model.framework */; };
 		8337C3021FD687910032B6AC /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C3001FD687890032B6AC /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		834F6B041FD49CC7009A913A /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 834F6B021FD49CBE009A913A /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -86,6 +89,9 @@
 		8316E5D71FD338D600075F12 /* UseCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UseCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8316E6141FD33D8900075F12 /* GetLocationUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationUseCaseFactory.swift; sourceTree = "<group>"; };
 		8316E6171FD33D9A00075F12 /* GetUserUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserUseCaseFactory.swift; sourceTree = "<group>"; };
+		831EA9AA200DAD890026D607 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		831EA9AC200DB2940026D607 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		831EA9AF200DB2B70026D607 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8337C3001FD687890032B6AC /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		834F6B021FD49CBE009A913A /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		835E10241FD2ABEE006CCE83 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +181,14 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		831EA9AE200DB2AB0026D607 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				831EA9AF200DB2B70026D607 /* String+Extensions.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		835E101B1FD2ABEE006CCE83 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +220,7 @@
 				8302FA651FD32CD000415265 /* User */,
 				835E102E1FD2ABEE006CCE83 /* Assets.xcassets */,
 				835E10301FD2ABEE006CCE83 /* LaunchScreen.storyboard */,
+				831EA9AB200DAD890026D607 /* Localizable.strings */,
 				835E10331FD2ABEE006CCE83 /* Info.plist */,
 			);
 			path = App;
@@ -232,6 +247,7 @@
 		83A58A5E1FD4916C00A38BB5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				831EA9AE200DB2AB0026D607 /* Foundation */,
 				83A58A5F1FD4917900A38BB5 /* UIKit */,
 			);
 			path = Extensions;
@@ -241,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				83A58A5C1FD4915E00A38BB5 /* UIStackView+Extensions.swift */,
+				831EA9AC200DB2940026D607 /* UIView+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -381,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				835E10321FD2ABEE006CCE83 /* LaunchScreen.storyboard in Resources */,
+				831EA9A9200DAD890026D607 /* Localizable.strings in Resources */,
 				835E102F1FD2ABEE006CCE83 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,12 +591,14 @@
 				83A58A5D1FD4915E00A38BB5 /* UIStackView+Extensions.swift in Sources */,
 				83B93F301FD30897001CA8A2 /* AppNavigator.swift in Sources */,
 				83B93F2E1FD30816001CA8A2 /* UserNavigator.swift in Sources */,
+				831EA9B0200DB2B70026D607 /* String+Extensions.swift in Sources */,
 				8316E6161FD33D8900075F12 /* GetLocationUseCaseFactory.swift in Sources */,
 				8316E6181FD33D9A00075F12 /* GetUserUseCaseFactory.swift in Sources */,
 				8302FA641FD32C4F00415265 /* UserLocationViewFactory.swift in Sources */,
 				835E10281FD2ABEE006CCE83 /* AppDelegate.swift in Sources */,
 				83B93F321FD30E9F001CA8A2 /* UserLocationViewController.swift in Sources */,
 				8302FA621FD32BA900415265 /* UserViewFactory.swift in Sources */,
+				831EA9AD200DB2940026D607 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +634,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		831EA9AB200DAD890026D607 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				831EA9AA200DAD890026D607 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		835E10301FD2ABEE006CCE83 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
