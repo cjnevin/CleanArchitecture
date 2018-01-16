@@ -24,11 +24,16 @@ def presentation
   action
 end
 
+def app
+  presentation
+  pod 'SnapKit', '~> 4.0'
+end
+
 workspace 'CleanArchitecture.xcworkspace'
 target 'App' do
   project 'Platforms/iOS/App.xcodeproj'
   use_frameworks!
-  presentation
+  app
 
   target 'AppTests' do
     inherit! :search_paths

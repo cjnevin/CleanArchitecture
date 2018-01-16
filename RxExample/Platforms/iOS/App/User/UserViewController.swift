@@ -2,6 +2,7 @@ import UIKit
 import Presentation
 import RxSwift
 import RxCocoa
+import SnapKit
 
 class UserViewController: UIViewController {
     private lazy var showMapButton: UIButton = makeShowMapButton()
@@ -46,22 +47,10 @@ class UserViewController: UIViewController {
 
     private func layout() {
         navigationItem.title = "User Details"
-
         view.backgroundColor = .white
-        view.addManuallyAnchoredSubview(showMapButton)
-        view.addManuallyAnchoredSubview(nameStackView)
-
-        NSLayoutConstraint.activate([
-            nameStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            nameStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            nameStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            nameStackView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.2),
-
-            showMapButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            showMapButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            showMapButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            showMapButton.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.2)
-        ])
+        
+        layoutNameStackView()
+        layoutShowMapButton()
     }
 }
 
@@ -82,6 +71,27 @@ private extension UILabel {
 }
 
 private extension UserViewController {
+    private var layoutGuide: UILayoutGuide {
+        return view.safeAreaLayoutGuide
+    }
+    
+    private func layoutNameStackView() {
+        view.addSubview(nameStackView)
+        nameStackView.snp.makeConstraints { make in
+            make.leading.top.equalTo(layoutGuide).offset(20)
+            make.trailing.equalTo(layoutGuide).offset(-20)
+            make.height.equalTo(layoutGuide.snp.height).multipliedBy(0.2)
+        }
+    }
+    
+    private func layoutShowMapButton() {
+        view.addSubview(showMapButton)
+        showMapButton.snp.makeConstraints { make in
+            make.leading.trailing.bottom.equalTo(layoutGuide)
+            make.height.equalTo(layoutGuide.snp.height).multipliedBy(0.2)
+        }
+    }
+    
     private func makeShowMapButton() -> UIButton {
         let button = UIButton(type: .custom)
         button.backgroundColor = UIColor.blue.withAlphaComponent(0.05)

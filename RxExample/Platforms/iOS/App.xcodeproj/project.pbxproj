@@ -26,7 +26,6 @@
 		835E10321FD2ABEE006CCE83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835E10301FD2ABEE006CCE83 /* LaunchScreen.storyboard */; };
 		835E103D1FD2ABEE006CCE83 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E103C1FD2ABEE006CCE83 /* AppTests.swift */; };
 		835E10481FD2ABEE006CCE83 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E10471FD2ABEE006CCE83 /* AppUITests.swift */; };
-		83A58A5B1FD48F7D00A38BB5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A58A5A1FD48F7D00A38BB5 /* UIView+Extensions.swift */; };
 		83A58A5D1FD4915E00A38BB5 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A58A5C1FD4915E00A38BB5 /* UIStackView+Extensions.swift */; };
 		83B93F2E1FD30816001CA8A2 /* UserNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93F2D1FD30816001CA8A2 /* UserNavigator.swift */; };
 		83B93F301FD30897001CA8A2 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93F2F1FD30897001CA8A2 /* AppNavigator.swift */; };
@@ -101,7 +100,6 @@
 		835E10431FD2ABEE006CCE83 /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		835E10471FD2ABEE006CCE83 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		835E10491FD2ABEE006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83A58A5A1FD48F7D00A38BB5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		83A58A5C1FD4915E00A38BB5 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		83B93F2D1FD30816001CA8A2 /* UserNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNavigator.swift; sourceTree = "<group>"; };
 		83B93F2F1FD30897001CA8A2 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				83A58A5C1FD4915E00A38BB5 /* UIStackView+Extensions.swift */,
-				83A58A5A1FD48F7D00A38BB5 /* UIView+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -430,12 +427,14 @@
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -573,7 +572,6 @@
 				835E102A1FD2ABEE006CCE83 /* UserViewController.swift in Sources */,
 				83A58A5D1FD4915E00A38BB5 /* UIStackView+Extensions.swift in Sources */,
 				83B93F301FD30897001CA8A2 /* AppNavigator.swift in Sources */,
-				83A58A5B1FD48F7D00A38BB5 /* UIView+Extensions.swift in Sources */,
 				83B93F2E1FD30816001CA8A2 /* UserNavigator.swift in Sources */,
 				8316E6161FD33D8900075F12 /* GetLocationUseCaseFactory.swift in Sources */,
 				8316E6181FD33D9A00075F12 /* GetUserUseCaseFactory.swift in Sources */,

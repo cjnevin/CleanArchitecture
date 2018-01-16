@@ -4,6 +4,7 @@ import MapKit
 import Presentation
 import RxSwift
 import RxCocoa
+import SnapKit
 
 class UserLocationViewController: UIViewController {
     private lazy var mapView: MKMapView = MKMapView()
@@ -28,16 +29,18 @@ class UserLocationViewController: UIViewController {
 
     private func layout() {
         navigationItem.title = "User Location"
-
         view.backgroundColor = .white
-        view.addManuallyAnchoredSubview(mapView)
+        
+        layoutMapView()
+    }
+}
 
-        NSLayoutConstraint.activate([
-            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mapView.topAnchor.constraint(equalTo: view.topAnchor),
-            mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+private extension UserLocationViewController {
+    private func layoutMapView() {
+        view.addSubview(mapView)
+        mapView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
 }
 
