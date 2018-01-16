@@ -32,5 +32,33 @@ public struct UserProvider: UseCase.UserProvider {
                             }
                 }
                 .map { $0.asModel() }
+                .catchError(GetUserError.map)
     }
 }
+
+public enum GetUserError: Swift.Error {
+    case notFound
+    case unknown
+    
+    static func map(error: Error) -> Single<User> {
+        return .error(error.asGetUserError().asGetUserUseCaseError())
+    }
+}
+
+fileprivate extension Error {
+    func asGetUserError() -> GetUserError {
+        guard let error = self as? GetUserError else {
+            return GetUserError.unknown
+        }
+        return error
+    }
+}
+
+fileprivate extension GetUserError {
+    func asGetUserUseCaseError() -> GetUserUseCase.Error {
+        switch self {
+        case .notFound: return .notFound
+        case .unknown: return .unknown
+        }
+    }
+} 

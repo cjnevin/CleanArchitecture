@@ -11,8 +11,8 @@
 		78FD97D2D8647AFF7AB78479 /* Pods_UseCaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2966D5A333E76489A8CB232C /* Pods_UseCaseTests.framework */; };
 		8337C2F11FD6873F0032B6AC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8337C2F21FD6873F0032B6AC /* Model.framework */; };
 		835E10D51FD2AC65006CCE83 /* UseCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835E10CB1FD2AC65006CCE83 /* UseCase.framework */; };
-		835E10DA1FD2AC65006CCE83 /* UseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E10D91FD2AC65006CCE83 /* UseCaseTests.swift */; };
 		835E10DC1FD2AC65006CCE83 /* UseCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 835E10CE1FD2AC65006CCE83 /* UseCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		837792EF1FDA8A5D00D67FD2 /* GetUserLocationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837792EE1FDA8A5D00D67FD2 /* GetUserLocationUseCaseTests.swift */; };
 		83B93EF21FD2AEA6001CA8A2 /* GetUserLocationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93EF11FD2AEA6001CA8A2 /* GetUserLocationUseCase.swift */; };
 		83B93F021FD2FA10001CA8A2 /* GetUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B93F011FD2FA0F001CA8A2 /* GetUserUseCase.swift */; };
 /* End PBXBuildFile section */
@@ -38,8 +38,8 @@
 		835E10CE1FD2AC65006CCE83 /* UseCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseCase.h; sourceTree = "<group>"; };
 		835E10CF1FD2AC65006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835E10D41FD2AC65006CCE83 /* UseCaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		835E10D91FD2AC65006CCE83 /* UseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseTests.swift; sourceTree = "<group>"; };
 		835E10DB1FD2AC65006CCE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		837792EE1FDA8A5D00D67FD2 /* GetUserLocationUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserLocationUseCaseTests.swift; sourceTree = "<group>"; };
 		83B93EF11FD2AEA6001CA8A2 /* GetUserLocationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserLocationUseCase.swift; sourceTree = "<group>"; };
 		83B93F011FD2FA0F001CA8A2 /* GetUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCase.swift; sourceTree = "<group>"; };
 		91D1FCA0343E080FAA6833D7 /* Pods-UseCaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UseCaseTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-UseCaseTests/Pods-UseCaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 		835E10D81FD2AC65006CCE83 /* UseCaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				835E10D91FD2AC65006CCE83 /* UseCaseTests.swift */,
 				835E10DB1FD2AC65006CCE83 /* Info.plist */,
+				837792EE1FDA8A5D00D67FD2 /* GetUserLocationUseCaseTests.swift */,
 			);
 			path = UseCaseTests;
 			sourceTree = "<group>";
@@ -200,6 +200,7 @@
 					};
 					835E10D31FD2AC65006CCE83 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -281,10 +282,14 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-UseCaseTests/Pods-UseCaseTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -340,7 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				835E10DA1FD2AC65006CCE83 /* UseCaseTests.swift in Sources */,
+				837792EF1FDA8A5D00D67FD2 /* GetUserLocationUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,11 +523,13 @@
 			baseConfigurationReference = 0F2023E2CE18BAE8C4BB370C /* Pods-UseCaseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UseCaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjnevin.UseCaseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -533,6 +540,7 @@
 			baseConfigurationReference = 91D1FCA0343E080FAA6833D7 /* Pods-UseCaseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UseCaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

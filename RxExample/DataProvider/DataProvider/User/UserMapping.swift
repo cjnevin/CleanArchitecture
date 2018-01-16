@@ -25,3 +25,4 @@ extension User {
                        lastName: lastName)
     }
 }
+

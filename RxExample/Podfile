@@ -18,7 +18,7 @@ def rxtest
   pod 'RxBlocking'
 end
 
-def ui
+def presentation
   rxswift
   rxcocoa
   action
@@ -28,11 +28,11 @@ workspace 'CleanArchitecture.xcworkspace'
 target 'App' do
   project 'Platforms/iOS/App.xcodeproj'
   use_frameworks!
-  ui
+  presentation
 
   target 'AppTests' do
     inherit! :search_paths
-    ui
+    presentation
   end
 
   target 'AppUITests' do
@@ -44,15 +44,11 @@ end
 target 'Presentation' do
   project 'Presentation/Presentation.xcodeproj'
   use_frameworks!
-  rxcocoa
-  rxswift
-  action
+  presentation
 
   target 'PresentationTests' do
     inherit! :search_paths
-    rxcocoa
-    rxswift
-    action
+    presentation
     rxtest
   end
 end
@@ -77,6 +73,7 @@ target 'UseCase' do
   target 'UseCaseTests' do
     inherit! :search_paths
     rxswift
+    rxtest
   end
 end
 

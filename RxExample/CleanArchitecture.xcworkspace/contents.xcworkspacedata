@@ -31,7 +31,7 @@
       location = "group:UseCase/UseCase.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/chris/projects/me/_CleanArchitecture/RxExample/Entity/Model.xcodeproj">
+      location = "group:Model/Model.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Mock/Mock.xcodeproj">

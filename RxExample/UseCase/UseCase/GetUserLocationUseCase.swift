@@ -8,7 +8,7 @@ public protocol UserLocationProvider {
 
 public struct GetUserLocationUseCase {
     private let provider: UserLocationProvider
-
+    
     public init(provider: UserLocationProvider) {
         self.provider = provider
     }
