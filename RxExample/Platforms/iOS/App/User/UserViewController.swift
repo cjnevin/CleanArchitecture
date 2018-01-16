@@ -17,14 +17,15 @@ class UserViewController: UIViewController {
         didSet {
             singleDisposable.dispose()
 
-            guard let viewModel = viewModel else {
-                return
+            if let viewModel = viewModel {
+                singleDisposable.setDisposable(
+                    bind(viewModel)
+                )
             }
-            singleDisposable.setDisposable(bind(viewModel: viewModel))
         }
     }
 
-    private func bind(viewModel: UserViewModel) -> Disposable {
+    private func bind(_ viewModel: UserViewModel) -> Disposable {
         showMapButton.rx.action = viewModel.showMap
 
         return CompositeDisposable(disposables: [

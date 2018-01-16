@@ -13,15 +13,20 @@ class UserLocationViewController: UIViewController {
     var viewModel: UserLocationViewModel? {
         didSet {
             singleDisposable.dispose()
-
+            
             if let viewModel = viewModel {
                 singleDisposable.setDisposable(
-                        viewModel.rx.location().drive(mapView.rx.location)
+                    bind(viewModel)
                 )
             }
         }
     }
-
+    
+    private func bind(_ viewModel: UserLocationViewModel) -> Disposable {
+        return viewModel.rx.location()
+            .drive(mapView.rx.location)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
