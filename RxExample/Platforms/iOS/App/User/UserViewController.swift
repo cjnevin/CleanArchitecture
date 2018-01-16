@@ -102,30 +102,30 @@ private extension UserViewController {
     }
 
     private func makeFirstNameTitleLabel() -> UILabel {
-        return UILabel.makeTitleLabel(with: "First Name:")
+        return .makeTitleLabel(with: "First Name:")
     }
 
     private func makeLastNameTitleLabel() -> UILabel {
-        return UILabel.makeTitleLabel(with: "Last Name:")
+        return .makeTitleLabel(with: "Last Name:")
     }
 
     private func makeFirstNameValueLabel() -> UILabel {
-        return UILabel.makeValueLabel()
+        return .makeValueLabel()
     }
 
     private func makeLastNameValueLabel() -> UILabel {
-        return UILabel.makeValueLabel()
+        return .makeValueLabel()
     }
 
     private func makeFirstNameStackView() -> UIStackView {
-        return UIStackView.makeHorizontalStackView(subviews: firstNameTitleLabel, firstNameValueLabel)
+        return .makeHorizontalStackView(subviews: firstNameTitleLabel, firstNameValueLabel)
     }
 
     private func makeLastNameStackView() -> UIStackView {
-        return UIStackView.makeHorizontalStackView(subviews: lastNameTitleLabel, lastNameValueLabel)
+        return .makeHorizontalStackView(subviews: lastNameTitleLabel, lastNameValueLabel)
     }
 
     private func makeNameStackView() -> UIStackView {
-        return UIStackView.makeVerticalStackView(subviews: makeFirstNameStackView(), makeLastNameStackView())
+        return .makeVerticalStackView(subviews: makeFirstNameStackView(), makeLastNameStackView())
     }
 }
