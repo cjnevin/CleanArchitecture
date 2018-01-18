@@ -10,8 +10,8 @@ class AppNavigator {
     }
 
     private func begin() {
-        let wireframe = UserViewFactory()
-        window?.rootViewController = wireframe.makeUserView()
+        let userViewFactory = UserViewFactory()
+        window?.rootViewController = userViewFactory.makeUserView()
         window?.makeKeyAndVisible()
     }
 }
