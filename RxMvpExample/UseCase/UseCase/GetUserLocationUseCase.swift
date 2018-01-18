@@ -1,0 +1,19 @@
+import Foundation
+import Model
+import RxSwift
+
+public protocol UserLocationProvider {
+    func getLocation() -> Observable<Location>
+}
+
+public class GetUserLocationUseCase {
+    private let provider: UserLocationProvider
+    
+    public init(provider: UserLocationProvider) {
+        self.provider = provider
+    }
+
+    public func getLocation() -> Observable<Location> {
+        return provider.getLocation()
+    }
+}
