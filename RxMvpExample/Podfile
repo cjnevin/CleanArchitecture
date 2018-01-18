@@ -1,0 +1,111 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.0'
+
+def rxswift
+  pod 'RxSwift'
+end
+
+def rxcocoa
+  pod 'RxCocoa'
+end
+
+def rxtest
+  pod 'RxTest'
+  pod 'RxBlocking'
+end
+
+def presentation
+  rxswift
+end
+
+def app
+  presentation
+  rxcocoa
+  pod 'SnapKit', '~> 4.0'
+end
+
+workspace 'CleanArchitecture.xcworkspace'
+target 'App' do
+  project 'Platforms/iOS/App.xcodeproj'
+  use_frameworks!
+  app
+
+  target 'AppTests' do
+    inherit! :search_paths
+    presentation
+  end
+
+  target 'AppUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
+
+target 'Presentation' do
+  project 'Presentation/Presentation.xcodeproj'
+  use_frameworks!
+  presentation
+
+  target 'PresentationTests' do
+    inherit! :search_paths
+    presentation
+    rxtest
+  end
+end
+
+target 'DataProvider' do
+  project 'DataProvider/DataProvider.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'DataProviderTests' do
+    inherit! :search_paths
+    rxswift
+    rxtest
+  end
+end
+
+target 'UseCase' do
+  project 'UseCase/UseCase.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'UseCaseTests' do
+    inherit! :search_paths
+    rxswift
+    rxtest
+  end
+end
+
+target 'ApiService' do
+  project 'Services/ApiService/ApiService.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'ApiServiceTests' do
+    inherit! :search_paths
+    rxswift
+  end
+end
+
+target 'LocationService' do
+  project 'Services/LocationService/LocationService.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'LocationServiceTests' do
+    inherit! :search_paths
+    rxswift
+  end
+end
+
+target 'StorageService' do
+  project 'Services/StorageService/StorageService.xcodeproj'
+  use_frameworks!
+  rxswift
+
+  target 'StorageServiceTests' do
+    inherit! :search_paths
+    rxswift
+  end
+end

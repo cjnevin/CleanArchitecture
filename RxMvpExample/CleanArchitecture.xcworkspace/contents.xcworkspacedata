@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Platforms">
+      <FileRef
+         location = "group:Platforms/iOS/App.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Presentation/Presentation.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Services">
+      <FileRef
+         location = "group:Services/ApiService/ApiService.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Services/LocationService/LocationService.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Services/StorageService/StorageService.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:DataProvider/DataProvider.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:UseCase/UseCase.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Model/Model.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Mock/Mock.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
