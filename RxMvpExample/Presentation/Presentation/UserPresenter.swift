@@ -3,7 +3,7 @@ import Model
 import UseCase
 import RxSwift
 
-public protocol UserView: BaseView {
+public protocol UserView {
     func showUser(_ user: User)
     func showError(_ error: Error)
     func showMap()
@@ -11,7 +11,7 @@ public protocol UserView: BaseView {
     var showMapTrigger: Observable<Void> { get }
 }
 
-public class UserPresenter<T: UserView>: BasePresenter<T> {
+public class UserPresenter<T: UserView>: Presenter<T> {
     private let useCase: GetUserUseCase
     private let workerScheduler: ImmediateSchedulerType
     private let mainScheduler: ImmediateSchedulerType

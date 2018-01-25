@@ -3,11 +3,11 @@ import Model
 import UseCase
 import RxSwift
 
-public protocol UserLocationView: BaseView {
+public protocol UserLocationView {
     func showLocation(_ location: Location)
 }
 
-public class UserLocationPresenter<T: UserLocationView>: BasePresenter<T> {
+public class UserLocationPresenter<T: UserLocationView>: Presenter<T> {
     private let useCase: GetUserLocationUseCase
     private let workerScheduler: ImmediateSchedulerType
     private let mainScheduler: ImmediateSchedulerType
