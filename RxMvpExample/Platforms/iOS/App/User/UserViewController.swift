@@ -14,8 +14,7 @@ class UserViewController: UIViewController, UserView {
     private lazy var nameStackView: UIStackView = makeNameStackView()
     
     var presenter: UserPresenter<UserViewController>?
-    var navigator: UserNavigator?
-    
+
     func showUser(_ user: User) {
         firstNameValueLabel.attributedText = Style.attributedValue(for: user.firstName)
         lastNameValueLabel.attributedText = Style.attributedValue(for: user.lastName)
@@ -24,11 +23,7 @@ class UserViewController: UIViewController, UserView {
     func showError(_ error: Error) {
         print(error)
     }
-    
-    func showMap() {
-        navigator?.navigateToMap()
-    }
-    
+
     var showMapTrigger: Observable<Void> {
         return showMapButton.rx.tap.asObservable()
     }

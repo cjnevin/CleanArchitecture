@@ -14,12 +14,9 @@ struct UserLocationViewFactory {
     private typealias View = UserLocationViewController
     private typealias Presenter = UserLocationPresenter<View>
     private let provider: DataProvider.UserLocationProvider
-    private let navigationController: UINavigationController?
 
-    init(provider: DataProvider.UserLocationProvider = .default,
-         navigationController: UINavigationController?) {
+    init(provider: DataProvider.UserLocationProvider = .default) {
         self.provider = provider
-        self.navigationController = navigationController
     }
     
     func makeUserLocationView() -> UserLocationViewController {
